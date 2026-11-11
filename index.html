@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CJF – Contabilidades Jorge Fernandes</title>
+<meta name="description" content="Contabilidade, fiscalidade, recursos humanos e consultoria de gestão em Lomar, Braga. Contabilista certificado OCC n.º 64605.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #2b2f42;
+    --slate: #585e7e;
+    --muted: #5f6478;
+    --line: #e3e4ea;
+    --paper: #ffffff;
+    --tint: #f5f5f8;
+    --accent: #b8611f;      /* darker than the logo orange, for readable text/links */
+    --accent-soft: #f6b170; /* logo orange */
+    --max: 68rem;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font: 400 1.0625rem/1.65 "Public Sans", system-ui, sans-serif;
+  }
+  h1, h2, h3 { font-family: "Libre Caslon Text", Georgia, serif; font-weight: 400; line-height: 1.2; margin: 0; }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: .5rem 1rem; z-index: 10; }
+
+  /* header */
+  header { border-bottom: 1px solid var(--line); background: var(--paper); position: sticky; top: 0; z-index: 5; }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 4.5rem; }
+  .brand img { height: 3.25rem; width: auto; display: block; }
+  nav ul { display: flex; gap: 1.75rem; list-style: none; margin: 0; padding: 0; }
+  nav a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: .95rem; }
+  nav a:hover { color: var(--accent); }
+
+  /* hero */
+  .hero { padding: 5.5rem 0 4.5rem; }
+  .eyebrow { color: var(--slate); font-weight: 600; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 1.25rem; }
+  .hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); max-width: 20ch; }
+  .hero h1 em { font-style: italic; color: var(--slate); }
+  .hero p.lead { font-size: 1.15rem; color: var(--muted); max-width: 46ch; margin: 1.5rem 0 2.25rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .btn { display: inline-block; padding: .8rem 1.4rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: .95rem; }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-primary:hover { background: var(--slate); }
+  .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+  .btn-ghost:hover { border-color: var(--slate); }
+
+  /* sections */
+  section { padding: 4.5rem 0; }
+  .tint { background: var(--tint); }
+  .head { display: grid; grid-template-columns: 1fr 1.4fr; gap: 2rem 4rem; align-items: start; margin-bottom: 3rem; }
+  .head h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
+  .head p { margin: 0; color: var(--muted); }
+
+  .services { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); }
+  .service { padding: 2rem 2rem 2.25rem 0; border-bottom: 1px solid var(--line); }
+  .service:nth-child(odd) { padding-right: 3rem; border-right: 1px solid var(--line); }
+  .service:nth-child(even) { padding-left: 3rem; }
+  .service .num { font-family: "Libre Caslon Text", Georgia, serif; color: var(--accent); font-size: .95rem; }
+  .service h3 { font-size: 1.45rem; margin: .35rem 0 .75rem; }
+  .service p { margin: 0; color: var(--muted); font-size: 1rem; }
+
+  .about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem 4rem; align-items: start; }
+  .about h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 1.25rem; }
+  .about p { color: var(--muted); margin: 0 0 1rem; }
+  .founder { border-left: 3px solid var(--accent-soft); padding: .25rem 0 .25rem 1.5rem; }
+  .founder strong { display: block; font-family: "Libre Caslon Text", Georgia, serif; font-weight: 400; font-size: 1.3rem; color: var(--ink); }
+  .founder span { color: var(--muted); font-size: .98rem; }
+
+  .contacts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .contact { background: var(--paper); padding: 1.75rem; }
+  .contact h3 { font-family: "Public Sans", system-ui, sans-serif; font-weight: 600; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--slate); margin-bottom: .6rem; }
+  .contact p { margin: 0; }
+  .contact a { color: var(--ink); text-decoration: none; font-weight: 500; }
+  .contact a:hover { color: var(--accent); text-decoration: underline; }
+  .note { font-size: .85rem; color: var(--muted); margin-top: .35rem !important; }
+
+  footer { border-top: 1px solid var(--line); padding: 2rem 0; font-size: .9rem; color: var(--muted); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+  footer a { color: var(--muted); display: inline-flex; align-items: center; gap: .45rem; text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+  footer svg { width: 1.15rem; height: 1.15rem; fill: currentColor; }
+
+  @media (max-width: 760px) {
+    nav ul { gap: 1rem; }
+    nav li.hide-sm { display: none; }
+    .hero { padding: 3.5rem 0 3rem; }
+    section { padding: 3.25rem 0; }
+    .head, .about { grid-template-columns: 1fr; }
+    .services { grid-template-columns: 1fr; }
+    .service, .service:nth-child(odd), .service:nth-child(even) { padding: 1.75rem 0; border-right: 0; }
+    .contacts { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#topo"><img src="assets/logo.png" alt="CJF Contabilidades" width="120" height="120"></a>
+    <nav aria-label="Principal">
+      <ul>
+        <li class="hide-sm"><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contactos">Contactos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" id="topo">
+    <div class="wrap">
+      <p class="eyebrow">Contabilidade · Fiscalidade · Lomar, Braga</p>
+      <h1>CJF – Contabilidades <em>Jorge Fernandes</em></h1>
+      <p class="lead">Vários anos de experiência em contabilidade, fiscalidade e consultoria de gestão de empresas nos mais variados setores de atividade.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contactos">Fale connosco</a>
+        <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint" id="servicos">
+    <div class="wrap">
+      <div class="head">
+        <h2>Serviços</h2>
+        <p>Nas áreas da contabilidade, consultoria de gestão e negócios das empresas nas áreas financeira, fiscal, recursos humanos e no cumprimento das obrigações fiscais e administrativas, apostamos na qualidade, rigor, competência e confidencialidade que satisfaça as necessidades e expectativas dos clientes, assegurando e respeitando os normativos legais em vigor.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <span class="num">01</span>
+          <h3>Contabilidade</h3>
+          <p>Elaboramos as contabilidades de acordo com os princípios do SNC. Aconselhamos qual a melhor opção a seguir, tendo por base as necessidades e o tipo de negócio, e damos apoio no início da atividade e na constituição de sociedades. Preparamos as demonstrações financeiras anuais e intercalares, dependendo da necessidade do cliente, de forma a que possa tomar atempadamente as melhores decisões. Auxiliamos no planeamento fiscal do cliente tendo em conta a evolução dos dados registados na atividade.</p>
+        </article>
+        <article class="service">
+          <span class="num">02</span>
+          <h3>Fiscalidade</h3>
+          <p>Planeamos, preparamos e cumprimos com transparência e eficácia todas as obrigações fiscais legalmente exigidas. Ajudamos os nossos clientes na compreensão da fiscalidade, de modo a que se entenda o porquê do pagamento do imposto, para que, em conjunto, possamos otimizar o desempenho fiscal.</p>
+        </article>
+        <article class="service">
+          <span class="num">03</span>
+          <h3>Recursos Humanos</h3>
+          <p>Realizamos os processamentos de salários, bem como a entrega das respetivas obrigações declarativas junto da Segurança Social. Admissão e/ou cessação de contratos na Segurança Social.</p>
+        </article>
+        <article class="service">
+          <span class="num">04</span>
+          <h3>Consultoria</h3>
+          <p>Apoiamos o cliente na tomada de decisões com base nos registos contabilísticos. Fomentamos reuniões periódicas para análise conjunta de demonstrações financeiras, para melhoria na tomada de decisões.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap about">
+      <div>
+        <h2>Porquê contratar os nossos serviços?</h2>
+        <p>A CJF conta com vários anos de experiência no exercício da contabilidade, fiscalidade e consultoria de gestão de empresas nos mais variados setores de atividade.</p>
+        <p>Apostamos na qualidade, no rigor, na competência e na confidencialidade, sempre no respeito pelos normativos legais em vigor.</p>
+      </div>
+      <div class="founder">
+        <strong>Jorge Fernandes</strong>
+        <span>Fundador da CJF. Contabilista certificado inscrito na Ordem dos Contabilistas Certificados sob o número 64605, responsável técnico da CJF.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint" id="contactos">
+    <div class="wrap">
+      <div class="head">
+        <h2>Contactos</h2>
+        <p>Para qualquer questão e/ou esclarecimento, fale connosco: estamos ao seu dispor.</p>
+      </div>
+      <div class="contacts">
+        <div class="contact">
+          <h3>Morada</h3>
+          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Largo+12+de+Dezembro+9+4705-259+Lomar+Braga" target="_blank" rel="noopener">Largo 12 de Dezembro, 9 R/C<br>4705-259 Lomar (Braga)</a></p>
+        </div>
+        <div class="contact">
+          <h3>Email</h3>
+          <p><a href="mailto:geral@tocfernandes.pt">geral@tocfernandes.pt</a></p>
+        </div>
+        <div class="contact">
+          <h3>Telefone</h3>
+          <p><a href="tel:+351961955184">+351 961 955 184</a></p>
+          <p class="note">Chamada para a rede móvel nacional</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="ano">2026</span> CJF – Contabilidades Jorge Fernandes</span>
+    <a href="https://www.facebook.com/profile.php?id=100054249710188" target="_blank" rel="noopener" aria-label="CJF no Facebook">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+      Facebook
+    </a>
+  </div>
+</footer>
+<script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>
