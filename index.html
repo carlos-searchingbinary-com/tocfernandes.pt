@@ -5,117 +5,201 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CJF – Contabilidades Jorge Fernandes</title>
 <meta name="description" content="Contabilidade, fiscalidade, recursos humanos e consultoria de gestão em Lomar, Braga. Contabilista certificado OCC n.º 64605.">
+<meta name="theme-color" content="#262a4a">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #2b2f42;
-    --slate: #585e7e;
-    --muted: #5f6478;
-    --line: #e3e4ea;
+    --night: #262a4a;   /* logo slate, deepened */
+    --night-2: #323763;
+    --slate: #585e7e;   /* logo slate */
+    --apricot: #f6b170; /* logo orange */
+    --apricot-deep: #e9903f;
+    --mist: #eef0f6;
     --paper: #ffffff;
-    --tint: #f5f5f8;
-    --accent: #b8611f;      /* darker than the logo orange, for readable text/links */
-    --accent-soft: #f6b170; /* logo orange */
-    --max: 68rem;
+    --ink: #1f2238;
+    --muted: #5b607a;
+    --display: "Bodoni Moda", "Didot", Georgia, serif;
+    --body: "Albert Sans", system-ui, sans-serif;
+    --max: 74rem;
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0; background: var(--paper); color: var(--ink);
-    font: 400 1.0625rem/1.65 "Public Sans", system-ui, sans-serif;
-  }
-  h1, h2, h3 { font-family: "Libre Caslon Text", Georgia, serif; font-weight: 400; line-height: 1.2; margin: 0; }
-  a { color: var(--accent); }
-  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; }
-  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { margin: 0; color: var(--ink); background: var(--paper); font: 400 1.0625rem/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.08; margin: 0; letter-spacing: -.01em; }
+  p { margin: 0; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--apricot-deep); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding-inline: 1.5rem; }
   .skip { position: absolute; left: -999px; }
-  .skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: .5rem 1rem; z-index: 10; }
+  .skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: .5rem 1rem; z-index: 20; }
 
-  /* header */
-  header { border-bottom: 1px solid var(--line); background: var(--paper); position: sticky; top: 0; z-index: 5; }
-  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 4.5rem; }
-  .brand img { height: 3.25rem; width: auto; display: block; }
-  nav ul { display: flex; gap: 1.75rem; list-style: none; margin: 0; padding: 0; }
-  nav a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: .95rem; }
-  nav a:hover { color: var(--accent); }
+  /* ---------- header ---------- */
+  .site-header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.94); backdrop-filter: blur(8px); box-shadow: 0 1px 0 rgba(38,42,74,.1); }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: 4.75rem; }
+  .brand { display: flex; align-items: center; gap: .85rem; text-decoration: none; }
+  .brand img { height: 2.9rem; width: auto; display: block; }
+  .brand span { font-family: var(--display); font-size: 1.05rem; line-height: 1.15; color: var(--slate); border-left: 1px solid rgba(38,42,74,.2); padding-left: .85rem; }
+  .menu { display: flex; align-items: center; gap: 2rem; list-style: none; margin: 0; padding: 0; }
+  .menu a { text-decoration: none; font-weight: 500; font-size: .98rem; }
+  .menu a:not(.pill):hover { color: var(--apricot-deep); }
+  .pill { display: inline-flex; align-items: center; gap: .5rem; background: var(--night); color: #fff; padding: .65rem 1.15rem; border-radius: 999px; font-weight: 600; transition: background .2s; }
+  .pill:hover { background: var(--night-2); }
+  .pill svg { width: 1rem; height: 1rem; fill: var(--apricot); }
 
-  /* hero */
-  .hero { padding: 5.5rem 0 4.5rem; }
-  .eyebrow { color: var(--slate); font-weight: 600; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 1.25rem; }
-  .hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); max-width: 20ch; }
-  .hero h1 em { font-style: italic; color: var(--slate); }
-  .hero p.lead { font-size: 1.15rem; color: var(--muted); max-width: 46ch; margin: 1.5rem 0 2.25rem; }
-  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
-  .btn { display: inline-block; padding: .8rem 1.4rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: .95rem; }
-  .btn-primary { background: var(--ink); color: #fff; }
-  .btn-primary:hover { background: var(--slate); }
-  .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
-  .btn-ghost:hover { border-color: var(--slate); }
-
-  /* sections */
-  section { padding: 4.5rem 0; }
-  .tint { background: var(--tint); }
-  .head { display: grid; grid-template-columns: 1fr 1.4fr; gap: 2rem 4rem; align-items: start; margin-bottom: 3rem; }
-  .head h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
-  .head p { margin: 0; color: var(--muted); }
-
-  .services { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); }
-  .service { padding: 2rem 2rem 2.25rem 0; border-bottom: 1px solid var(--line); }
-  .service:nth-child(odd) { padding-right: 3rem; border-right: 1px solid var(--line); }
-  .service:nth-child(even) { padding-left: 3rem; }
-  .service .num { font-family: "Libre Caslon Text", Georgia, serif; color: var(--accent); font-size: .95rem; }
-  .service h3 { font-size: 1.45rem; margin: .35rem 0 .75rem; }
-  .service p { margin: 0; color: var(--muted); font-size: 1rem; }
-
-  .about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem 4rem; align-items: start; }
-  .about h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 1.25rem; }
-  .about p { color: var(--muted); margin: 0 0 1rem; }
-  .founder { border-left: 3px solid var(--accent-soft); padding: .25rem 0 .25rem 1.5rem; }
-  .founder strong { display: block; font-family: "Libre Caslon Text", Georgia, serif; font-weight: 400; font-size: 1.3rem; color: var(--ink); }
-  .founder span { color: var(--muted); font-size: .98rem; }
-
-  .contacts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-  .contact { background: var(--paper); padding: 1.75rem; }
-  .contact h3 { font-family: "Public Sans", system-ui, sans-serif; font-weight: 600; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--slate); margin-bottom: .6rem; }
-  .contact p { margin: 0; }
-  .contact a { color: var(--ink); text-decoration: none; font-weight: 500; }
-  .contact a:hover { color: var(--accent); text-decoration: underline; }
-  .note { font-size: .85rem; color: var(--muted); margin-top: .35rem !important; }
-
-  footer { border-top: 1px solid var(--line); padding: 2rem 0; font-size: .9rem; color: var(--muted); }
-  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
-  footer a { color: var(--muted); display: inline-flex; align-items: center; gap: .45rem; text-decoration: none; }
-  footer a:hover { color: var(--ink); }
-  footer svg { width: 1.15rem; height: 1.15rem; fill: currentColor; }
-
-  @media (max-width: 760px) {
-    nav ul { gap: 1rem; }
-    nav li.hide-sm { display: none; }
-    .hero { padding: 3.5rem 0 3rem; }
-    section { padding: 3.25rem 0; }
-    .head, .about { grid-template-columns: 1fr; }
-    .services { grid-template-columns: 1fr; }
-    .service, .service:nth-child(odd), .service:nth-child(even) { padding: 1.75rem 0; border-right: 0; }
-    .contacts { grid-template-columns: 1fr; }
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative; overflow: hidden; color: #fff;
+    background:
+      repeating-linear-gradient(to bottom, transparent 0 2.4rem, rgba(255,255,255,.045) 2.4rem calc(2.4rem + 1px)), /* ledger rules */
+      radial-gradient(60rem 40rem at 85% 10%, #3a4078 0%, transparent 60%),
+      var(--night);
   }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; padding-block: 6rem 5.5rem; }
+  .hero h1 { font-size: clamp(2.5rem, 5vw, 4.2rem); }
+  .hero h1 i { font-weight: 500; color: var(--apricot); }
+  .lead { margin-top: 1.75rem; font-size: 1.2rem; max-width: 34rem; color: #d5d8ea; }
+  .actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2.5rem; }
+  .btn { display: inline-flex; align-items: center; gap: .6rem; padding: 1rem 1.6rem; border-radius: 999px; text-decoration: none; font-weight: 600; transition: transform .2s, background .2s, border-color .2s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-main { background: var(--apricot); color: var(--night); }
+  .btn-main:hover { background: #ffc48b; }
+  .btn-line { border: 1.5px solid rgba(255,255,255,.35); color: #fff; }
+  .btn-line:hover { border-color: #fff; }
+
+  /* ledger sheet + seal: the one signature element */
+  .desk { position: relative; justify-self: end; width: min(100%, 25rem); }
+  .sheet {
+    background: #fffdf9; color: var(--ink); border-radius: 6px; padding: 1.6rem 1.6rem 1.9rem; transform: rotate(2.5deg);
+    box-shadow: 0 2.5rem 4rem -1rem rgba(8,10,30,.6), 0 0 0 1px rgba(255,255,255,.08);
+    animation: rise .9s cubic-bezier(.2,.8,.2,1) both;
+  }
+  .sheet-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--night); padding-bottom: .6rem; }
+  .sheet-head b { font-family: var(--display); font-weight: 600; font-size: 1.25rem; }
+  .sheet-head span { font-size: .8rem; color: var(--muted); }
+  .sheet ul { list-style: none; margin: 0; padding: 0; }
+  .sheet li { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .8rem 0; border-bottom: 1px solid #e4e1d8; font-size: .97rem; }
+  .sheet li em { font-style: normal; font-size: .8rem; font-weight: 600; color: #2f7d57; display: inline-flex; align-items: center; gap: .3rem; white-space: nowrap; }
+  .sheet li em::before { content: ""; width: .95rem; height: .95rem; border-radius: 50%; background: #2f7d57 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.4l2.6 2.6L12 5.6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain; }
+  .sheet-foot { margin-top: 1.1rem; font-family: var(--display); font-style: italic; color: var(--slate); font-size: 1.05rem; }
+  .seal { position: absolute; right: -2.25rem; bottom: -3.25rem; width: 9.5rem; height: 9.5rem; filter: drop-shadow(0 .8rem 1.2rem rgba(8,10,30,.45)); }
+  .seal .ring { transform-origin: 50% 50%; animation: turn 40s linear infinite; }
+  @keyframes turn { to { transform: rotate(360deg); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(2rem) rotate(0deg); } }
+
+  .areas { border-top: 1px solid rgba(255,255,255,.14); }
+  .areas ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
+  .areas a { display: block; padding: 1.4rem 1.5rem; text-decoration: none; font-family: var(--display); font-size: 1.3rem; color: #fff; border-left: 1px solid rgba(255,255,255,.14); transition: background .2s, color .2s; }
+  .areas li:first-child a { border-left: 0; padding-left: 0; }
+  .areas a:hover { color: var(--apricot); }
+
+  /* ---------- services ---------- */
+  .services { background: var(--mist); padding: 6rem 0; }
+  .intro { display: grid; grid-template-columns: .8fr 1.2fr; gap: 2rem 4rem; align-items: end; margin-bottom: 3.5rem; }
+  .intro h2 { font-size: clamp(2.2rem, 4.2vw, 3.5rem); }
+  .intro p { color: var(--muted); }
+  .bento { display: grid; grid-template-columns: 1.05fr 1fr 1fr; gap: 1.25rem; }
+  .card { border-radius: 1.25rem; padding: 2.25rem; background: var(--paper); display: flex; flex-direction: column; gap: 1rem; }
+  .card h3 { font-size: 1.9rem; }
+  .card p { color: var(--muted); font-size: 1rem; }
+  .card .ico { width: 3.5rem; height: 3.5rem; border-radius: 1rem; display: grid; place-items: center; background: var(--mist); margin-bottom: .5rem; }
+  .card .ico svg { width: 1.75rem; height: 1.75rem; fill: none; stroke: var(--night); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .card-lead { grid-row: span 2; background: var(--night); color: #fff; justify-content: flex-end; min-height: 30rem;
+    background-image: repeating-linear-gradient(to bottom, transparent 0 2.4rem, rgba(255,255,255,.05) 2.4rem calc(2.4rem + 1px)); }
+  .card-lead h3 { font-size: 2.6rem; }
+  .card-lead p { color: #d5d8ea; }
+  .card-lead .ico { background: var(--apricot); margin-bottom: auto; }
+  .card-warm { background: var(--apricot); }
+  .card-warm p { color: #4a3317; }
+  .card-warm .ico { background: rgba(255,255,255,.55); }
+  .card-wide { grid-column: span 2; flex-direction: row; align-items: center; gap: 2rem; }
+  .card-wide .ico { flex: none; margin: 0; }
+
+  /* ---------- about ---------- */
+  .about { padding: 6.5rem 0; }
+  .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 4rem; align-items: center; }
+  .about h2 { font-size: clamp(2.2rem, 4.4vw, 3.6rem); }
+  .about .text { margin-top: 1.75rem; color: var(--muted); max-width: 36rem; font-size: 1.1rem; }
+  .values { display: flex; flex-wrap: wrap; gap: .6rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .values li { font-family: var(--display); font-style: italic; font-size: 1.25rem; padding: .45rem 1.1rem; border-radius: 999px; border: 1.5px solid var(--night); }
+  .values li:nth-child(even) { background: var(--night); color: #fff; }
+  .founder { background: var(--mist); border-radius: 1.25rem; padding: 2.5rem; position: relative; }
+  .founder::before { content: "JF"; font-family: var(--display); font-size: 1.6rem; font-weight: 600; width: 4.5rem; height: 4.5rem; border-radius: 50%; display: grid; place-items: center; background: var(--apricot); color: var(--night); margin-bottom: 1.5rem; }
+  .founder strong { display: block; font-family: var(--display); font-weight: 500; font-size: 2rem; line-height: 1.1; }
+  .founder small { display: block; margin: .35rem 0 1.1rem; font-size: 1rem; font-weight: 600; color: var(--apricot-deep); }
+  .founder p { color: var(--muted); font-size: 1rem; }
+
+  /* ---------- contact ---------- */
+  .contact { background: var(--night); color: #fff; padding: 6rem 0 5rem; position: relative; overflow: hidden; }
+  .contact::after { content: ""; position: absolute; right: -14rem; top: -14rem; width: 34rem; height: 34rem; border-radius: 50%; border: 5rem solid rgba(246,177,112,.12); pointer-events: none; }
+  .contact h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); max-width: 14ch; position: relative; z-index: 1; }
+  .contact .sub { margin-top: 1.25rem; color: #d5d8ea; font-size: 1.15rem; max-width: 32rem; }
+  .ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3.5rem; position: relative; z-index: 1; }
+  .way { display: block; text-decoration: none; border-radius: 1.25rem; padding: 2rem; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); transition: background .2s, transform .2s; }
+  .way:hover { background: rgba(255,255,255,.12); transform: translateY(-3px); }
+  .way svg { width: 1.75rem; height: 1.75rem; fill: none; stroke: var(--apricot); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .way b { display: block; margin: 1.25rem 0 .35rem; font-weight: 500; color: #b9bdd6; font-size: .95rem; }
+  .way span { display: block; font-weight: 600; font-size: 1.35rem; line-height: 1.25; overflow-wrap: anywhere; }
+  .way small { display: block; margin-top: .5rem; color: #b9bdd6; font-size: .85rem; }
+  .way-main { background: var(--apricot); color: var(--night); border-color: transparent; }
+  .way-main:hover { background: #ffc48b; }
+  .way-main svg { stroke: var(--night); }
+  .way-main b, .way-main small { color: #5a3d1a; }
+
+  footer { background: #1d2040; color: #b9bdd6; padding: 1.75rem 0; font-size: .92rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+  footer a { display: inline-flex; align-items: center; gap: .5rem; text-decoration: none; color: #fff; font-weight: 500; }
+  footer a:hover { color: var(--apricot); }
+  footer svg { width: 1.3rem; height: 1.3rem; fill: currentColor; }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; padding-block: 3.5rem 5.5rem; gap: 3.5rem; }
+    .desk { justify-self: center; width: min(100% - 2.5rem, 23rem); }
+    .areas ul { grid-template-columns: 1fr 1fr; }
+    .areas a { padding: 1.1rem 1rem; font-size: 1.15rem; }
+    .areas li:nth-child(odd) a { border-left: 0; padding-left: 0; }
+    .areas li:nth-child(n+3) a { border-top: 1px solid rgba(255,255,255,.14); }
+    .intro, .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .about-grid { gap: 3rem; }
+    .bento { grid-template-columns: 1fr; }
+    .card-lead { grid-row: auto; min-height: 0; }
+    .card-lead .ico { margin-bottom: .5rem; }
+    .card-wide { grid-column: auto; flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .ways { grid-template-columns: 1fr; }
+    .services, .contact { padding: 4rem 0; }
+    .about { padding: 4.5rem 0; }
+  }
+  @media (max-width: 620px) {
+    .wrap { padding-inline: 1.25rem; }
+    .brand span, .menu .opt { display: none; }
+    .menu { gap: 1rem; }
+    .seal { right: -1rem; width: 8rem; height: 8rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .sheet, .seal .ring { animation: none; }
+    .btn, .way { transition: none; }
+  }
 </style>
 </head>
 <body>
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
 
-<header>
+<header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="#topo"><img src="assets/logo.png" alt="CJF Contabilidades" width="120" height="120"></a>
+    <a class="brand" href="#topo" aria-label="CJF Contabilidades – início">
+      <img src="assets/logo.png" alt="CJF Contabilidades" width="109" height="79">
+      <span>Contabilidades<br>Jorge Fernandes</span>
+    </a>
     <nav aria-label="Principal">
-      <ul>
-        <li class="hide-sm"><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#contactos">Contactos</a></li>
+      <ul class="menu">
+        <li class="opt"><a href="#servicos">Serviços</a></li>
+        <li class="opt"><a href="#sobre">Sobre</a></li>
+        <li class="opt"><a href="#contactos">Contactos</a></li>
+        <li><a class="pill" href="tel:+351961955184"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>961 955 184</a></li>
       </ul>
     </nav>
   </div>
@@ -123,41 +207,83 @@
 
 <main id="conteudo">
   <section class="hero" id="topo">
-    <div class="wrap">
-      <p class="eyebrow">Contabilidade · Fiscalidade · Lomar, Braga</p>
-      <h1>CJF – Contabilidades <em>Jorge Fernandes</em></h1>
-      <p class="lead">Vários anos de experiência em contabilidade, fiscalidade e consultoria de gestão de empresas nos mais variados setores de atividade.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#contactos">Fale connosco</a>
-        <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+    <div class="wrap hero-grid">
+      <div>
+        <h1>As contas da sua empresa, <i>tratadas com rigor.</i></h1>
+        <p class="lead">A CJF conta com vários anos de experiência em contabilidade, fiscalidade e consultoria de gestão de empresas nos mais variados setores de atividade.</p>
+        <div class="actions">
+          <a class="btn btn-main" href="#contactos">Fale connosco</a>
+          <a class="btn btn-line" href="#servicos">Conhecer os serviços</a>
+        </div>
+      </div>
+
+      <div class="desk" role="img" aria-label="Folha de trabalho da CJF com as obrigações da empresa em dia e o selo de Contabilista Certificado OCC n.º 64605">
+        <div class="sheet" aria-hidden="true">
+          <div class="sheet-head"><b>A sua empresa</b><span>tratado pela CJF</span></div>
+          <ul>
+            <li>Contabilidade organizada (SNC) <em>em dia</em></li>
+            <li>Obrigações fiscais <em>em dia</em></li>
+            <li>Processamento de salários <em>em dia</em></li>
+            <li>Segurança Social <em>em dia</em></li>
+            <li>Demonstrações financeiras <em>em dia</em></li>
+          </ul>
+          <p class="sheet-foot">Qualidade, rigor, competência e confidencialidade.</p>
+        </div>
+        <svg class="seal" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="98" fill="#f6b170"/>
+          <circle cx="100" cy="100" r="60" fill="none" stroke="#262a4a" stroke-width="1.5"/>
+          <g class="ring">
+            <path id="arco" d="M100 100 m-77 0 a77 77 0 1 1 154 0 a77 77 0 1 1 -154 0" fill="none"/>
+            <text font-family="Albert Sans, sans-serif" font-size="14.5" font-weight="700" fill="#262a4a"><textPath href="#arco" textLength="476" lengthAdjust="spacing">CONTABILISTA CERTIFICADO ✦ OCC N.º 64605 ✦</textPath></text>
+          </g>
+          <text x="100" y="116" text-anchor="middle" font-family="Bodoni Moda, Didot, serif" font-size="46" font-weight="600" fill="#262a4a">CJF</text>
+        </svg>
       </div>
     </div>
+
+    <nav class="areas" aria-label="Áreas de serviço">
+      <div class="wrap">
+        <ul>
+          <li><a href="#contabilidade">Contabilidade</a></li>
+          <li><a href="#fiscalidade">Fiscalidade</a></li>
+          <li><a href="#rh">Recursos Humanos</a></li>
+          <li><a href="#consultoria">Consultoria</a></li>
+        </ul>
+      </div>
+    </nav>
   </section>
 
-  <section class="tint" id="servicos">
+  <section class="services" id="servicos">
     <div class="wrap">
-      <div class="head">
-        <h2>Serviços</h2>
+      <div class="intro">
+        <h2>O que fazemos pela sua empresa</h2>
         <p>Nas áreas da contabilidade, consultoria de gestão e negócios das empresas nas áreas financeira, fiscal, recursos humanos e no cumprimento das obrigações fiscais e administrativas, apostamos na qualidade, rigor, competência e confidencialidade que satisfaça as necessidades e expectativas dos clientes, assegurando e respeitando os normativos legais em vigor.</p>
       </div>
-      <div class="services">
-        <article class="service">
-          <span class="num">01</span>
+
+      <div class="bento">
+        <article class="card card-lead" id="contabilidade">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/><path d="M9 8h6M9 11h4"/></svg></div>
           <h3>Contabilidade</h3>
-          <p>Elaboramos as contabilidades de acordo com os princípios do SNC. Aconselhamos qual a melhor opção a seguir, tendo por base as necessidades e o tipo de negócio, e damos apoio no início da atividade e na constituição de sociedades. Preparamos as demonstrações financeiras anuais e intercalares, dependendo da necessidade do cliente, de forma a que possa tomar atempadamente as melhores decisões. Auxiliamos no planeamento fiscal do cliente tendo em conta a evolução dos dados registados na atividade.</p>
+          <p>Elaboramos as contabilidades de acordo com os princípios do SNC. Aconselhamos qual a melhor opção a seguir, tendo por base as necessidades e o tipo de negócio, e damos apoio no início da atividade e na constituição de sociedades.</p>
+          <p>Preparamos as demonstrações financeiras anuais e intercalares, dependendo da necessidade do cliente, de forma a que possa tomar atempadamente as melhores decisões. Auxiliamos no planeamento fiscal do cliente tendo em conta a evolução dos dados registados na atividade.</p>
         </article>
-        <article class="service">
-          <span class="num">02</span>
-          <h3>Fiscalidade</h3>
-          <p>Planeamos, preparamos e cumprimos com transparência e eficácia todas as obrigações fiscais legalmente exigidas. Ajudamos os nossos clientes na compreensão da fiscalidade, de modo a que se entenda o porquê do pagamento do imposto, para que, em conjunto, possamos otimizar o desempenho fiscal.</p>
+
+        <article class="card card-wide" id="fiscalidade">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9.5 17l5-6"/><circle cx="9.7" cy="11.7" r="1"/><circle cx="14.3" cy="16.3" r="1"/></svg></div>
+          <div>
+            <h3>Fiscalidade</h3>
+            <p style="margin-top:.75rem">Planeamos, preparamos e cumprimos com transparência e eficácia todas as obrigações fiscais legalmente exigidas. Ajudamos os nossos clientes na compreensão da fiscalidade, de modo a que se entenda o porquê do pagamento do imposto, para que, em conjunto, possamos otimizar o desempenho fiscal.</p>
+          </div>
         </article>
-        <article class="service">
-          <span class="num">03</span>
+
+        <article class="card card-warm" id="rh">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.700 6 6"/><circle cx="17" cy="9.500" r="2.400"/><path d="M16.500 14.200c2.600.2 4.500 2.400 4.500 5.100"/></svg></div>
           <h3>Recursos Humanos</h3>
           <p>Realizamos os processamentos de salários, bem como a entrega das respetivas obrigações declarativas junto da Segurança Social. Admissão e/ou cessação de contratos na Segurança Social.</p>
         </article>
-        <article class="service">
-          <span class="num">04</span>
+
+        <article class="card" id="consultoria">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M7.500 15.500l3.500-4 3 2.500 4.500-6"/><path d="M15.500 8h3v3"/></svg></div>
           <h3>Consultoria</h3>
           <p>Apoiamos o cliente na tomada de decisões com base nos registos contabilísticos. Fomentamos reuniões periódicas para análise conjunta de demonstrações financeiras, para melhoria na tomada de decisões.</p>
         </article>
@@ -165,40 +291,45 @@
     </div>
   </section>
 
-  <section id="sobre">
-    <div class="wrap about">
+  <section class="about" id="sobre">
+    <div class="wrap about-grid">
       <div>
         <h2>Porquê contratar os nossos serviços?</h2>
-        <p>A CJF conta com vários anos de experiência no exercício da contabilidade, fiscalidade e consultoria de gestão de empresas nos mais variados setores de atividade.</p>
-        <p>Apostamos na qualidade, no rigor, na competência e na confidencialidade, sempre no respeito pelos normativos legais em vigor.</p>
+        <p class="text">A CJF conta com vários anos de experiência no exercício da contabilidade, fiscalidade e consultoria de gestão de empresas nos mais variados setores de atividade.</p>
+        <ul class="values" aria-label="Os nossos valores">
+          <li>Qualidade</li><li>Rigor</li><li>Competência</li><li>Confidencialidade</li>
+        </ul>
       </div>
-      <div class="founder">
+      <aside class="founder">
         <strong>Jorge Fernandes</strong>
-        <span>Fundador da CJF. Contabilista certificado inscrito na Ordem dos Contabilistas Certificados sob o número 64605, responsável técnico da CJF.</span>
-      </div>
+        <small>Fundador da CJF</small>
+        <p>Contabilista certificado inscrito na Ordem dos Contabilistas Certificados sob o número 64605, responsável técnico da CJF.</p>
+      </aside>
     </div>
   </section>
 
-  <section class="tint" id="contactos">
+  <section class="contact" id="contactos">
     <div class="wrap">
-      <div class="head">
-        <h2>Contactos</h2>
-        <p>Para qualquer questão e/ou esclarecimento, fale connosco: estamos ao seu dispor.</p>
-      </div>
-      <div class="contacts">
-        <div class="contact">
-          <h3>Morada</h3>
-          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Largo+12+de+Dezembro+9+4705-259+Lomar+Braga" target="_blank" rel="noopener">Largo 12 de Dezembro, 9 R/C<br>4705-259 Lomar (Braga)</a></p>
-        </div>
-        <div class="contact">
-          <h3>Email</h3>
-          <p><a href="mailto:geral@tocfernandes.pt">geral@tocfernandes.pt</a></p>
-        </div>
-        <div class="contact">
-          <h3>Telefone</h3>
-          <p><a href="tel:+351961955184">+351 961 955 184</a></p>
-          <p class="note">Chamada para a rede móvel nacional</p>
-        </div>
+      <h2>Fale connosco, estamos ao seu dispor.</h2>
+      <p class="sub">Para qualquer questão ou esclarecimento, ligue, escreva ou passe pelo escritório.</p>
+      <div class="ways">
+        <a class="way way-main" href="tel:+351961955184">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.500 4h3l1.500 4-2 1.500a11 11 0 0 0 5.500 5.500l1.500-2 4 1.500v3a2 2 0 0 1-2 2A15 15 0 0 1 4.500 6a2 2 0 0 1 2-2z"/></svg>
+          <b>Telefone</b>
+          <span>+351 961 955 184</span>
+          <small>Chamada para a rede móvel nacional</small>
+        </a>
+        <a class="way" href="mailto:geral@tocfernandes.pt">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.500 7l8.500 6 8.500-6"/></svg>
+          <b>Email</b>
+          <span>geral@tocfernandes.pt</span>
+        </a>
+        <a class="way" href="https://www.google.com/maps/search/?api=1&amp;query=Largo+12+de+Dezembro+9+4705-259+Lomar+Braga" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.200 7-11.500a7 7 0 0 0-14 0C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>
+          <b>Morada</b>
+          <span>Largo 12 de Dezembro, 9 R/C</span>
+          <small>4705-259 Lomar (Braga) · abrir no mapa</small>
+        </a>
       </div>
     </div>
   </section>
@@ -207,9 +338,9 @@
 <footer>
   <div class="wrap">
     <span>© <span id="ano">2026</span> CJF – Contabilidades Jorge Fernandes</span>
-    <a href="https://www.facebook.com/profile.php?id=100054249710188" target="_blank" rel="noopener" aria-label="CJF no Facebook">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
-      Facebook
+    <a href="https://www.facebook.com/profile.php?id=100054249710188" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.560 9.880v-6.990H7.900V12h2.540V9.800c0-2.500 1.490-3.890 3.780-3.890 1.090 0 2.240.2 2.240.2v2.460h-1.260c-1.240 0-1.630.77-1.630 1.560V12h2.780l-.44 2.890h-2.340v6.990A10 10 0 0 0 22 12z"/></svg>
+      Siga-nos no Facebook
     </a>
   </div>
 </footer>
