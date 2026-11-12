@@ -9,33 +9,7 @@
 <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon.png" sizes="32x32">
 <link rel="stylesheet" href="assets/fonts.css">
-<style>
-  :root { --night: #262a4a; --slate: #585e7e; --apricot: #f6b170; --apricot-deep: #b8611f; --mist: #eef0f6; --ink: #1f2238; --muted: #5b607a; }
-  * { box-sizing: border-box; }
-  body { margin: 0; color: var(--ink); background: #fff; font: 400 1.0625rem/1.65 "Albert Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-  h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; line-height: 1.15; margin: 0; }
-  a { color: var(--apricot-deep); }
-  :focus-visible { outline: 3px solid var(--apricot); outline-offset: 3px; border-radius: 2px; }
-  .wrap { max-width: 46rem; margin: 0 auto; padding-inline: 1.5rem; }
-  header { box-shadow: 0 1px 0 rgba(38,42,74,.1); }
-  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 4.75rem; }
-  header img { height: 2.9rem; width: auto; display: block; }
-  header a.back { color: var(--ink); text-decoration: none; font-weight: 500; }
-  header a.back:hover { color: var(--apricot-deep); }
-  .top { background: var(--night); color: #fff; padding-block: 3.5rem; }
-  .top h1 { font-size: clamp(2rem, 5vw, 3rem); }
-  .top p { margin: .9rem 0 0; color: #d5d8ea; }
-  main { padding-block: 3rem 4.5rem; }
-  h2 { font-size: 1.6rem; margin: 2.75rem 0 .9rem; }
-  h2:first-child { margin-top: 0; }
-  p, ul, dl { margin: 0 0 1rem; }
-  ul { padding-left: 1.2rem; }
-  dl { display: grid; grid-template-columns: max-content 1fr; gap: .45rem 1.5rem; background: var(--mist); border-radius: 1rem; padding: 1.5rem; }
-  dt { color: var(--muted); }
-  dd { margin: 0; font-weight: 500; }
-  footer { background: #1d2040; color: #b9bdd6; padding-block: 1.75rem; font-size: .92rem; }
-  @media (max-width: 560px) { dl { grid-template-columns: 1fr; gap: 0; } dd { margin-bottom: .8rem; } }
-</style>
+<link rel="stylesheet" href="assets/legal.css">
 </head>
 <body>
 <header>
@@ -76,7 +50,7 @@
   <p>Tem também o direito de apresentar reclamação à Comissão Nacional de Proteção de Dados, em <a href="https://www.cnpd.pt" target="_blank" rel="noopener">cnpd.pt</a>.</p>
 
   <h2>Cookies</h2>
-  <p>Este site não utiliza cookies nem tecnologias de rastreio. Os tipos de letra e as imagens são servidos pelo próprio site, sem pedidos a terceiros.</p>
+  <p>Este site não utiliza cookies nem tecnologias de rastreio. Veja a <a href="cookies.html">política de cookies</a>.</p>
   <p>As ligações para o Facebook e para o Google Maps só abrem esses serviços se clicar nelas; a partir daí aplicam-se as políticas de cada um.</p>
 
   <h2>Reclamações</h2>
@@ -84,7 +58,10 @@
 </main>
 
 <footer>
-  <div class="wrap">© <span id="ano">2026</span> AJRSF Unipessoal Lda · NIF 513 058 850</div>
+  <div class="wrap">
+    <span>© <span id="ano">2026</span> AJRSF Unipessoal Lda · NIF 513 058 850</span>
+    <nav aria-label="Informação legal"><a href="privacidade.html" aria-current="page">Privacidade e informação legal</a><a href="cookies.html">Cookies</a><a href="termos.html">Termos e condições</a></nav>
+  </div>
 </footer>
 <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
 </body>

@@ -1,0 +1,29 @@
+  :root { --night: #262a4a; --slate: #585e7e; --apricot: #f6b170; --apricot-deep: #b8611f; --mist: #eef0f6; --ink: #1f2238; --muted: #5b607a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--ink); background: #fff; font: 400 1.0625rem/1.65 "Albert Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; line-height: 1.15; margin: 0; }
+  a { color: var(--apricot-deep); }
+  :focus-visible { outline: 3px solid var(--apricot); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 46rem; margin: 0 auto; padding-inline: 1.5rem; }
+  header { box-shadow: 0 1px 0 rgba(38,42,74,.1); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 4.75rem; }
+  header img { height: 2.9rem; width: auto; display: block; }
+  header a.back { color: var(--ink); text-decoration: none; font-weight: 500; }
+  header a.back:hover { color: var(--apricot-deep); }
+  .top { background: var(--night); color: #fff; padding-block: 3.5rem; }
+  .top h1 { font-size: clamp(2rem, 5vw, 3rem); }
+  .top p { margin: .9rem 0 0; color: #d5d8ea; }
+  main { padding-block: 3rem 4.5rem; }
+  h2 { font-size: 1.6rem; margin: 2.75rem 0 .9rem; }
+  h2:first-child { margin-top: 0; }
+  p, ul, dl { margin: 0 0 1rem; }
+  ul { padding-left: 1.2rem; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: .45rem 1.5rem; background: var(--mist); border-radius: 1rem; padding: 1.5rem; }
+  dt { color: var(--muted); }
+  dd { margin: 0; font-weight: 500; }
+  footer { background: #1d2040; color: #b9bdd6; padding-block: 1.75rem; font-size: .92rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 1.5rem; }
+  footer nav { display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; }
+  footer a { color: #fff; }
+  footer a[aria-current] { text-decoration: none; color: #b9bdd6; }
+  @media (max-width: 560px) { dl { grid-template-columns: 1fr; gap: 0; } dd { margin-bottom: .8rem; } }
