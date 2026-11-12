@@ -17,10 +17,18 @@ T = {
 "Siga-nos no Facebook": ("Follow us on Facebook", "Síganos en Facebook", "Suivez-nous sur Facebook"),
 
 # ---------- index ----------
-"Contabilidade, fiscalidade, recursos humanos e consultoria de gestão em Lomar, Braga. Contabilista certificado OCC n.º 64605.": (
-    "Accounting, tax, human resources and management consulting in Lomar, Braga, Portugal. Certified accountant, OCC no. 64605.",
-    "Contabilidad, fiscalidad, recursos humanos y consultoría de gestión en Lomar, Braga (Portugal). Contable certificado OCC n.º 64605.",
-    "Comptabilité, fiscalité, ressources humaines et conseil en gestion à Lomar, Braga (Portugal). Comptable certifié OCC n° 64605."),
+"Contabilidade em Braga | CJF – Contabilidades Jorge Fernandes": (
+    "Accountant in Braga, Portugal | CJF – Contabilidades Jorge Fernandes",
+    "Contabilidad en Braga, Portugal | CJF – Contabilidades Jorge Fernandes",
+    "Comptabilité à Braga, Portugal | CJF – Contabilidades Jorge Fernandes"),
+"Gabinete de contabilidade em Lomar, Braga: contabilidade, fiscalidade, salários e consultoria de gestão para empresas de Braga e do Norte de Portugal. Contabilista certificado OCC n.º 64605.": (
+    "Accounting firm in Lomar, Braga: accounting, tax, payroll and management consulting for companies in Braga and Northern Portugal. Certified accountant, OCC no. 64605.",
+    "Asesoría contable en Lomar, Braga: contabilidad, fiscalidad, nóminas y consultoría de gestión para empresas de Braga y del Norte de Portugal. Contable certificado OCC n.º 64605.",
+    "Cabinet comptable à Lomar, Braga : comptabilité, fiscalité, paie et conseil en gestion pour les entreprises de Braga et du Nord du Portugal. Comptable certifié OCC n° 64605."),
+"A partir do nosso escritório em Lomar, acompanhamos empresas de Braga e do Norte de Portugal.": (
+    "From our office in Lomar, we work with companies in Braga and across Northern Portugal.",
+    "Desde nuestra oficina en Lomar, acompañamos a empresas de Braga y del Norte de Portugal.",
+    "Depuis notre bureau de Lomar, nous accompagnons des entreprises de Braga et du Nord du Portugal."),
 "Folha de trabalho da CJF com as obrigações da empresa em dia e o selo de Contabilista Certificado OCC n.º 64605": (
     "CJF worksheet showing the company's obligations up to date, with the Certified Accountant seal, OCC no. 64605",
     "Hoja de trabajo de CJF con las obligaciones de la empresa al día y el sello de Contable Certificado OCC n.º 64605",
@@ -32,10 +40,10 @@ T = {
 "Contactos": ("Contact", "Contacto", "Contact"),
 "As contas da sua empresa,": ("Your company's accounts,", "Las cuentas de su empresa,", "Les comptes de votre entreprise,"),
 "tratadas com rigor.": ("handled with rigour.", "tratadas con rigor.", "traités avec rigueur."),
-"A CJF conta com vários anos de experiência em contabilidade, fiscalidade e consultoria de gestão de empresas nos mais variados setores de atividade.": (
-    "CJF has many years of experience in accounting, tax and business management consulting for companies in a wide range of sectors.",
-    "CJF cuenta con varios años de experiencia en contabilidad, fiscalidad y consultoría de gestión de empresas en los más variados sectores de actividad.",
-    "CJF compte de nombreuses années d'expérience en comptabilité, fiscalité et conseil en gestion d'entreprises dans les secteurs d'activité les plus variés."),
+"Gabinete de contabilidade em Braga, com vários anos de experiência em contabilidade, fiscalidade e consultoria de gestão de empresas nos mais variados setores de atividade.": (
+    "An accounting firm in Braga, Portugal, with many years of experience in accounting, tax and business management consulting for companies in a wide range of sectors.",
+    "Asesoría contable en Braga, Portugal, con varios años de experiencia en contabilidad, fiscalidad y consultoría de gestión de empresas en los más variados sectores de actividad.",
+    "Cabinet comptable à Braga, au Portugal, avec de nombreuses années d'expérience en comptabilité, fiscalité et conseil en gestion d'entreprises dans les secteurs d'activité les plus variés."),
 "Fale connosco": ("Get in touch", "Hable con nosotros", "Contactez-nous"),
 "Conhecer os serviços": ("See our services", "Conocer los servicios", "Découvrir les services"),
 "A sua empresa": ("Your company", "Su empresa", "Votre entreprise"),

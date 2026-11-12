@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tocfernandes.pt/sitemap.xml

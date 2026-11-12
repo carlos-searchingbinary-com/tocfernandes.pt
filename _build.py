@@ -13,6 +13,7 @@ PAGES = ["index.html", "privacidade.html", "cookies.html", "termos.html"]
 LANGS = ["pt", "en", "es", "fr"]
 NAMES = {"pt": "Português", "en": "English", "es": "Español", "fr": "Français"}
 HTML_LANG = {"pt": "pt-PT", "en": "en", "es": "es", "fr": "fr"}
+OG_LOCALE = {"pt": "pt_PT", "en": "en_GB", "es": "es_ES", "fr": "fr_FR"}
 CUR = ' aria-current="true"'
 ATTRS = re.compile(r'\b(alt|aria-label)="([^"]*)"')
 
@@ -39,6 +40,37 @@ def chrome(s, page, lang):
     alts = "".join(f'\n<link rel="alternate" hreflang="{l}" href="{SITE}{"" if l == "pt" else l + "/"}{p}">' for l in LANGS)
     alts += f'\n<link rel="alternate" hreflang="x-default" href="{SITE}{p}">\n'
     return between(s, "hreflang", alts)
+
+
+def abs_url(page, lang):
+    return SITE + ("" if lang == "pt" else lang + "/") + ("" if page == "index.html" else page)
+
+
+def social(s, page, lang):
+    """Canonical and Open Graph tags, taken from the page's own (translated) title and description."""
+    title = re.search(r"<title>(.*?)</title>", s).group(1)
+    desc = re.search(r'<meta name="description" content="([^"]*)"', s).group(1)
+    tags = "".join(f"\n{t}" for t in (
+        f'<link rel="canonical" href="{abs_url(page, lang)}">',
+        '<meta property="og:type" content="website">',
+        '<meta property="og:site_name" content="CJF – Contabilidades Jorge Fernandes">',
+        f'<meta property="og:url" content="{abs_url(page, lang)}">',
+        f'<meta property="og:title" content="{title}">',
+        f'<meta property="og:description" content="{desc}">',
+        f'<meta property="og:image" content="{SITE}assets/og.png">',
+        f'<meta property="og:locale" content="{OG_LOCALE[lang]}">',
+        '<meta name="twitter:card" content="summary_large_image">')) + "\n"
+    return between(s, "social", tags)
+
+
+def sitemap():
+    urls = "".join(
+        f"  <url><loc>{abs_url(p, l)}</loc>"
+        + "".join(f'<xhtml:link rel="alternate" hreflang="{a}" href="{abs_url(p, a)}"/>' for a in LANGS)
+        + "</url>\n" for p in PAGES for l in LANGS)
+    (ROOT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + urls + "</urlset>\n")
 
 
 def translate(s, lang, missing):
@@ -73,7 +105,7 @@ def main():
     missing = set()
     for page in PAGES:
         src = chrome((ROOT / page).read_text(), page, "pt")
-        (ROOT / page).write_text(src)
+        (ROOT / page).write_text(social(src, page, "pt"))
         for lang in LANGS[1:]:
             s = chrome(src, page, lang)
             s = translate(s, lang, missing)
@@ -85,12 +117,13 @@ def main():
                 assert s.count(a) == 1
                 s = s.replace(a, a + f'  <p class="note">{LEGAL_NOTE[lang]}</p>\n')
             (ROOT / lang).mkdir(exist_ok=True)
-            (ROOT / lang / page).write_text(s)
+            (ROOT / lang / page).write_text(social(s, page, lang))
     if missing:
         sys.exit("No translation in _i18n.py for:\n  " + "\n  ".join(sorted(missing)))
     unused = [k for k in T if not any(k in (ROOT / p).read_text() for p in PAGES)]
     if unused:
         sys.exit("Translations in _i18n.py no longer used by any page:\n  " + "\n  ".join(unused))
+    sitemap()
     print(f"built {len(PAGES)} pages x {len(LANGS) - 1} languages")
 
 
