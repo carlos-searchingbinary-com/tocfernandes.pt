@@ -25,10 +25,6 @@ T = {
     "Accounting firm in Lomar, Braga: accounting, tax, payroll and management consulting for companies in Braga and Northern Portugal. Certified accountant, OCC no. 64605.",
     "Asesoría contable en Lomar, Braga: contabilidad, fiscalidad, nóminas y consultoría de gestión para empresas de Braga y del Norte de Portugal. Contable certificado OCC n.º 64605.",
     "Cabinet comptable à Lomar, Braga : comptabilité, fiscalité, paie et conseil en gestion pour les entreprises de Braga et du Nord du Portugal. Comptable certifié OCC n° 64605."),
-"A partir do nosso escritório em Lomar, acompanhamos empresas de Braga e do Norte de Portugal.": (
-    "From our office in Lomar, we work with companies in Braga and across Northern Portugal.",
-    "Desde nuestra oficina en Lomar, acompañamos a empresas de Braga y del Norte de Portugal.",
-    "Depuis notre bureau de Lomar, nous accompagnons des entreprises de Braga et du Nord du Portugal."),
 "Folha de trabalho da CJF com as obrigações da empresa em dia e o selo de Contabilista Certificado OCC n.º 64605": (
     "CJF worksheet showing the company's obligations up to date, with the Certified Accountant seal, OCC no. 64605",
     "Hoja de trabajo de CJF con las obligaciones de la empresa al día y el sello de Contable Certificado OCC n.º 64605",
