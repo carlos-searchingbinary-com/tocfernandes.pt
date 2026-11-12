@@ -104,6 +104,10 @@ T = {
     "For any question or clarification, call, write or drop by the office.",
     "Para cualquier duda o aclaración, llame, escriba o pase por la oficina.",
     "Pour toute question ou précision, appelez, écrivez ou passez au bureau."),
+"Horário: segunda a sexta, das 9h30 às 18h30.": (
+    "Opening hours: Monday to Friday, 9:30 am to 6:30 pm.",
+    "Horario: de lunes a viernes, de 9:30 a 18:30.",
+    "Horaires : du lundi au vendredi, de 9h30 à 18h30."),
 "Chamada para a rede móvel nacional": ("Call to a Portuguese mobile number", "Llamada a la red móvil nacional de Portugal", "Appel vers un mobile au Portugal"),
 "Morada": ("Address", "Dirección", "Adresse"),
 "4705-259 Lomar (Braga) · abrir no mapa": ("4705-259 Lomar (Braga), Portugal · open in map", "4705-259 Lomar (Braga), Portugal · abrir en el mapa", "4705-259 Lomar (Braga), Portugal · ouvrir sur la carte"),
