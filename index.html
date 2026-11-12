@@ -6,6 +6,13 @@
 <title>CJF – Contabilidades Jorge Fernandes</title>
 <meta name="description" content="Contabilidade, fiscalidade, recursos humanos e consultoria de gestão em Lomar, Braga. Contabilista certificado OCC n.º 64605.">
 <meta name="theme-color" content="#262a4a">
+<!--hreflang-->
+<link rel="alternate" hreflang="pt" href="https://tocfernandes.pt/">
+<link rel="alternate" hreflang="en" href="https://tocfernandes.pt/en/">
+<link rel="alternate" hreflang="es" href="https://tocfernandes.pt/es/">
+<link rel="alternate" hreflang="fr" href="https://tocfernandes.pt/fr/">
+<link rel="alternate" hreflang="x-default" href="https://tocfernandes.pt/">
+<!--/hreflang-->
 <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -35,6 +42,13 @@
   .wrap { max-width: var(--max); margin: 0 auto; padding-inline: 1.5rem; }
   .skip { position: absolute; left: -999px; }
   .skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: .5rem 1rem; z-index: 20; }
+
+  .langbar { background: var(--night); }
+  .langbar .wrap { display: flex; justify-content: flex-end; }
+  .langs { display: flex; gap: .15rem; margin-right: -.55rem; }
+  .langs a { color: #b9bdd6; font-size: .8rem; font-weight: 600; letter-spacing: .05em; text-decoration: none; padding: .45rem .55rem; }
+  .langs a:hover { color: #fff; }
+  .langs a[aria-current] { color: var(--apricot); }
 
   /* ---------- header ---------- */
   .site-header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.94); backdrop-filter: blur(8px); box-shadow: 0 1px 0 rgba(38,42,74,.1); }
@@ -186,6 +200,8 @@
 </head>
 <body>
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+<div class="langbar"><div class="wrap"><!--langs--><nav class="langs" aria-label="Idioma / Language"><a href="./" lang="pt" hreflang="pt" title="Português" aria-current="true">PT</a><a href="en/" lang="en" hreflang="en" title="English">EN</a><a href="es/" lang="es" hreflang="es" title="Español">ES</a><a href="fr/" lang="fr" hreflang="fr" title="Français">FR</a></nav><!--/langs--></div></div>
 
 <header class="site-header">
   <div class="wrap bar">

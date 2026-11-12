@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CJF – Contabilidades Jorge Fernandes</title>
+<meta name="description" content="Comptabilité, fiscalité, ressources humaines et conseil en gestion à Lomar, Braga (Portugal). Comptable certifié OCC n° 64605.">
+<meta name="theme-color" content="#262a4a">
+<!--hreflang-->
+<link rel="alternate" hreflang="pt" href="https://tocfernandes.pt/">
+<link rel="alternate" hreflang="en" href="https://tocfernandes.pt/en/">
+<link rel="alternate" hreflang="es" href="https://tocfernandes.pt/es/">
+<link rel="alternate" hreflang="fr" href="https://tocfernandes.pt/fr/">
+<link rel="alternate" hreflang="x-default" href="https://tocfernandes.pt/">
+<!--/hreflang-->
+<link rel="icon" href="../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/fonts.css">
+<style>
+  :root {
+    --night: #262a4a;   /* logo slate, deepened */
+    --night-2: #323763;
+    --slate: #585e7e;   /* logo slate */
+    --apricot: #f6b170; /* logo orange */
+    --apricot-deep: #e9903f;
+    --mist: #eef0f6;
+    --paper: #ffffff;
+    --ink: #1f2238;
+    --muted: #5b607a;
+    --display: "Playfair Display", Georgia, serif;
+    --body: "Albert Sans", system-ui, sans-serif;
+    --max: 74rem;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { margin: 0; color: var(--ink); background: var(--paper); font: 400 1.0625rem/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.08; margin: 0; letter-spacing: -.01em; }
+  p { margin: 0; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--apricot-deep); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding-inline: 1.5rem; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: .5rem 1rem; z-index: 20; }
+
+  .langbar { background: var(--night); }
+  .langbar .wrap { display: flex; justify-content: flex-end; }
+  .langs { display: flex; gap: .15rem; margin-right: -.55rem; }
+  .langs a { color: #b9bdd6; font-size: .8rem; font-weight: 600; letter-spacing: .05em; text-decoration: none; padding: .45rem .55rem; }
+  .langs a:hover { color: #fff; }
+  .langs a[aria-current] { color: var(--apricot); }
+
+  /* ---------- header ---------- */
+  .site-header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.94); backdrop-filter: blur(8px); box-shadow: 0 1px 0 rgba(38,42,74,.1); }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: 4.75rem; }
+  .brand { display: flex; align-items: center; gap: .85rem; text-decoration: none; }
+  .brand img { height: 2.9rem; width: auto; display: block; }
+  .brand span { font-family: var(--display); font-size: 1.05rem; line-height: 1.15; color: var(--slate); border-left: 1px solid rgba(38,42,74,.2); padding-left: .85rem; }
+  .menu { display: flex; align-items: center; gap: 2rem; list-style: none; margin: 0; padding: 0; }
+  .menu a { text-decoration: none; font-weight: 500; font-size: .98rem; }
+  .menu a:not(.pill):hover { color: var(--apricot-deep); }
+  .pill { display: inline-flex; align-items: center; gap: .5rem; background: var(--night); color: #fff; padding: .65rem 1.15rem; border-radius: 999px; font-weight: 600; transition: background .2s; }
+  .pill:hover { background: var(--night-2); }
+  .pill svg { width: 1rem; height: 1rem; fill: var(--apricot); }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative; overflow: hidden; color: #fff;
+    background:
+      repeating-linear-gradient(to bottom, transparent 0 2.4rem, rgba(255,255,255,.045) 2.4rem calc(2.4rem + 1px)), /* ledger rules */
+      radial-gradient(60rem 40rem at 85% 10%, #3a4078 0%, transparent 60%),
+      var(--night);
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; padding-block: 6rem 5.5rem; }
+  .hero h1 { font-size: clamp(2.5rem, 5vw, 4.2rem); }
+  .hero h1 i { font-weight: 500; color: var(--apricot); }
+  .lead { margin-top: 1.75rem; font-size: 1.2rem; max-width: 34rem; color: #d5d8ea; }
+  .actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2.5rem; }
+  .btn { display: inline-flex; align-items: center; gap: .6rem; padding: 1rem 1.6rem; border-radius: 999px; text-decoration: none; font-weight: 600; transition: transform .2s, background .2s, border-color .2s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-main { background: var(--apricot); color: var(--night); }
+  .btn-main:hover { background: #ffc48b; }
+  .btn-line { border: 1.5px solid rgba(255,255,255,.35); color: #fff; }
+  .btn-line:hover { border-color: #fff; }
+
+  /* ledger sheet + seal: the one signature element */
+  .desk { position: relative; justify-self: end; width: min(100%, 25rem); }
+  .sheet {
+    background: #fffdf9; color: var(--ink); border-radius: 6px; padding: 1.6rem 1.6rem 1.9rem; transform: rotate(2.5deg);
+    box-shadow: 0 2.5rem 4rem -1rem rgba(8,10,30,.6), 0 0 0 1px rgba(255,255,255,.08);
+    animation: rise .9s cubic-bezier(.2,.8,.2,1) both;
+  }
+  .sheet-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--night); padding-bottom: .6rem; }
+  .sheet-head b { font-family: var(--display); font-weight: 600; font-size: 1.25rem; }
+  .sheet-head span { font-size: .8rem; color: var(--muted); }
+  .sheet ul { list-style: none; margin: 0; padding: 0; }
+  .sheet li { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .8rem 0; border-bottom: 1px solid #e4e1d8; font-size: .97rem; }
+  .sheet li em { font-style: normal; font-size: .8rem; font-weight: 600; color: #2f7d57; display: inline-flex; align-items: center; gap: .3rem; white-space: nowrap; }
+  .sheet li em::before { content: ""; width: .95rem; height: .95rem; border-radius: 50%; background: #2f7d57 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.4l2.6 2.6L12 5.6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain; }
+  .sheet-foot { margin-top: 1.1rem; font-family: var(--display); font-style: italic; color: var(--slate); font-size: 1.05rem; }
+  .seal { position: absolute; right: -2.25rem; bottom: -3.25rem; width: 9.5rem; height: 9.5rem; filter: drop-shadow(0 .8rem 1.2rem rgba(8,10,30,.45)); }
+  .seal .ring { transform-origin: 50% 50%; animation: turn 40s linear infinite; }
+  @keyframes turn { to { transform: rotate(360deg); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(2rem) rotate(0deg); } }
+
+  .areas { border-top: 1px solid rgba(255,255,255,.14); }
+  .areas ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
+  .areas a { display: block; padding: 1.4rem 1.5rem; text-decoration: none; font-family: var(--display); font-size: 1.3rem; color: #fff; border-left: 1px solid rgba(255,255,255,.14); transition: background .2s, color .2s; }
+  .areas li:first-child a { border-left: 0; padding-left: 0; }
+  .areas a:hover { color: var(--apricot); }
+
+  /* ---------- services ---------- */
+  .services { background: var(--mist); padding: 6rem 0; }
+  .intro { display: grid; grid-template-columns: .8fr 1.2fr; gap: 2rem 4rem; align-items: end; margin-bottom: 3.5rem; }
+  .intro h2 { font-size: clamp(2.2rem, 4.2vw, 3.5rem); }
+  .intro p { color: var(--muted); }
+  .bento { display: grid; grid-template-columns: 1.05fr 1fr 1fr; gap: 1.25rem; }
+  .card { border-radius: 1.25rem; padding: 2.25rem; background: var(--paper); display: flex; flex-direction: column; gap: 1rem; }
+  .card h3 { font-size: 1.9rem; }
+  .card p { color: var(--muted); font-size: 1rem; }
+  .card .ico { width: 3.5rem; height: 3.5rem; border-radius: 1rem; display: grid; place-items: center; background: var(--mist); margin-bottom: .5rem; }
+  .card .ico svg { width: 1.75rem; height: 1.75rem; fill: none; stroke: var(--night); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .card-lead { grid-row: span 2; background: var(--night); color: #fff; justify-content: flex-end; min-height: 30rem;
+    background-image: repeating-linear-gradient(to bottom, transparent 0 2.4rem, rgba(255,255,255,.05) 2.4rem calc(2.4rem + 1px)); }
+  .card-lead h3 { font-size: 2.6rem; }
+  .card-lead p { color: #d5d8ea; }
+  .card-lead .ico { background: var(--apricot); margin-bottom: auto; }
+  .card-warm { background: var(--apricot); }
+  .card-warm p { color: #4a3317; }
+  .card-warm .ico { background: rgba(255,255,255,.55); }
+  .card-wide { grid-column: span 2; flex-direction: row; align-items: center; gap: 2rem; }
+  .card-wide .ico { flex: none; margin: 0; }
+
+  /* ---------- about ---------- */
+  .about { padding: 6.5rem 0; }
+  .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 4rem; align-items: center; }
+  .about h2 { font-size: clamp(2.2rem, 4.4vw, 3.6rem); }
+  .about .text { margin-top: 1.75rem; color: var(--muted); max-width: 36rem; font-size: 1.1rem; }
+  .values { display: flex; flex-wrap: wrap; gap: .6rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .values li { font-family: var(--display); font-size: 1.2rem; padding: .5rem 1.2rem; border-radius: 999px; background: var(--night); color: #fff; }
+  .founder { background: var(--mist); border-radius: 1.25rem; padding: 2.5rem; position: relative; }
+  .founder::before { content: "JF"; font-family: var(--display); font-size: 1.6rem; font-weight: 600; width: 4.5rem; height: 4.5rem; border-radius: 50%; display: grid; place-items: center; background: var(--apricot); color: var(--night); margin-bottom: 1.5rem; }
+  .founder strong { display: block; font-family: var(--display); font-weight: 500; font-size: 2rem; line-height: 1.1; }
+  .founder small { display: block; margin: .35rem 0 1.1rem; font-size: 1rem; font-weight: 600; color: var(--apricot-deep); }
+  .founder p { color: var(--muted); font-size: 1rem; }
+
+  /* ---------- contact ---------- */
+  .contact { background: var(--night); color: #fff; padding: 6rem 0 5rem; position: relative; overflow: hidden; }
+  .contact::after { content: ""; position: absolute; right: -14rem; top: -14rem; width: 34rem; height: 34rem; border-radius: 50%; border: 5rem solid rgba(246,177,112,.12); pointer-events: none; }
+  .contact h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); max-width: 14ch; position: relative; z-index: 1; }
+  .contact .sub { margin-top: 1.25rem; color: #d5d8ea; font-size: 1.15rem; max-width: 32rem; }
+  .ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3.5rem; position: relative; z-index: 1; }
+  .way { display: block; text-decoration: none; border-radius: 1.25rem; padding: 2rem; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); transition: background .2s, transform .2s; }
+  .way:hover { background: rgba(255,255,255,.12); transform: translateY(-3px); }
+  .way svg { width: 1.75rem; height: 1.75rem; fill: none; stroke: var(--apricot); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .way b { display: block; margin: 1.25rem 0 .35rem; font-weight: 500; color: #b9bdd6; font-size: .95rem; }
+  .way span { display: block; font-weight: 600; font-size: 1.35rem; line-height: 1.25; overflow-wrap: anywhere; }
+  .way small { display: block; margin-top: .5rem; color: #b9bdd6; font-size: .85rem; }
+  .way-main { background: var(--apricot); color: var(--night); border-color: transparent; }
+  .way-main:hover { background: #ffc48b; }
+  .way-main svg { stroke: var(--night); }
+  .way-main b, .way-main small { color: #5a3d1a; }
+
+  footer { background: #1d2040; color: #b9bdd6; padding: 1.75rem 0; font-size: .92rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+  footer a { display: inline-flex; align-items: center; gap: .5rem; text-decoration: none; color: #fff; font-weight: 500; }
+  footer a:hover { color: var(--apricot); }
+  footer a.legal { display: inline; font-weight: 400; text-decoration: underline; }
+  footer svg { width: 1.3rem; height: 1.3rem; fill: currentColor; }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; padding-block: 3.5rem 5.5rem; gap: 3.5rem; }
+    .desk { justify-self: center; width: min(100% - 2.5rem, 23rem); }
+    .areas ul { grid-template-columns: 1fr 1fr; }
+    .areas a { padding: 1.1rem 1rem; font-size: 1.15rem; }
+    .areas li:nth-child(odd) a { border-left: 0; padding-left: 0; }
+    .areas li:nth-child(n+3) a { border-top: 1px solid rgba(255,255,255,.14); }
+    .intro, .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .about-grid { gap: 3rem; }
+    .bento { grid-template-columns: 1fr; }
+    .card-lead { grid-row: auto; min-height: 0; }
+    .card-lead .ico { margin-bottom: .5rem; }
+    .card-wide { grid-column: auto; flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .ways { grid-template-columns: 1fr; }
+    .services, .contact { padding: 4rem 0; }
+    .about { padding: 4.5rem 0; }
+  }
+  @media (max-width: 620px) {
+    .wrap { padding-inline: 1.25rem; }
+    .brand span, .menu .opt { display: none; }
+    .menu { gap: 1rem; }
+    .seal { right: -1rem; width: 8rem; height: 8rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .sheet, .seal .ring { animation: none; }
+    .btn, .way { transition: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Aller au contenu</a>
+
+<div class="langbar"><div class="wrap"><!--langs--><nav class="langs" aria-label="Idioma / Language"><a href="../" lang="pt" hreflang="pt" title="Português">PT</a><a href="../en/" lang="en" hreflang="en" title="English">EN</a><a href="../es/" lang="es" hreflang="es" title="Español">ES</a><a href="../fr/" lang="fr" hreflang="fr" title="Français" aria-current="true">FR</a></nav><!--/langs--></div></div>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#topo" aria-label="CJF Contabilidades – accueil">
+      <img src="../assets/logo-mark.svg" alt="CJF Contabilidades" width="96" height="66">
+      <span>Contabilidades<br>Jorge Fernandes</span>
+    </a>
+    <nav aria-label="Principale">
+      <ul class="menu">
+        <li class="opt"><a href="#servicos">Services</a></li>
+        <li class="opt"><a href="#sobre">À propos</a></li>
+        <li class="opt"><a href="#contactos">Contact</a></li>
+        <li><a class="pill" href="tel:+351961955184"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>961 955 184</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" id="topo">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Les comptes de votre entreprise, <i>traités avec rigueur.</i></h1>
+        <p class="lead">CJF compte de nombreuses années d'expérience en comptabilité, fiscalité et conseil en gestion d'entreprises dans les secteurs d'activité les plus variés.</p>
+        <div class="actions">
+          <a class="btn btn-main" href="#contactos">Contactez-nous</a>
+          <a class="btn btn-line" href="#servicos">Découvrir les services</a>
+        </div>
+      </div>
+
+      <div class="desk" role="img" aria-label="Feuille de travail de CJF avec les obligations de l'entreprise à jour et le sceau de Comptable certifié OCC n° 64605">
+        <div class="sheet" aria-hidden="true">
+          <div class="sheet-head"><b>Votre entreprise</b><span>géré par CJF</span></div>
+          <ul>
+            <li>Comptabilité organisée (SNC) <em>à jour</em></li>
+            <li>Obligations fiscales <em>à jour</em></li>
+            <li>Paie <em>à jour</em></li>
+            <li>Sécurité sociale <em>à jour</em></li>
+            <li>États financiers <em>à jour</em></li>
+          </ul>
+          <p class="sheet-foot">Qualité, rigueur, compétence et confidentialité.</p>
+        </div>
+        <svg class="seal" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="98" fill="#f6b170"/>
+          <circle cx="100" cy="100" r="60" fill="none" stroke="#262a4a" stroke-width="1.5"/>
+          <g class="ring">
+            <path id="arco" d="M100 100 m-77 0 a77 77 0 1 1 154 0 a77 77 0 1 1 -154 0" fill="none"/>
+            <text font-family="Albert Sans, sans-serif" font-size="14.5" font-weight="700" fill="#262a4a"><textPath href="#arco" textLength="476" lengthAdjust="spacing">COMPTABLE CERTIFIÉ ✦ OCC N° 64605 ✦</textPath></text>
+          </g>
+          <text x="100" y="116" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="46" font-weight="600" fill="#262a4a">CJF</text>
+        </svg>
+      </div>
+    </div>
+
+    <nav class="areas" aria-label="Domaines de service">
+      <div class="wrap">
+        <ul>
+          <li><a href="#contabilidade">Comptabilité</a></li>
+          <li><a href="#fiscalidade">Fiscalité</a></li>
+          <li><a href="#rh">Ressources humaines</a></li>
+          <li><a href="#consultoria">Conseil</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  <section class="services" id="servicos">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Ce que nous faisons pour votre entreprise</h2>
+        <p>Dans les domaines de la comptabilité, du conseil en gestion et en affaires des entreprises, en matière financière, fiscale, de ressources humaines et de respect des obligations fiscales et administratives, nous misons sur la qualité, la rigueur, la compétence et la confidentialité qui répondent aux besoins et aux attentes des clients, en assurant et en respectant la réglementation en vigueur.</p>
+      </div>
+
+      <div class="bento">
+        <article class="card card-lead" id="contabilidade">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/><path d="M9 8h6M9 11h4"/></svg></div>
+          <h3>Comptabilité</h3>
+          <p>Nous tenons les comptabilités conformément aux principes du SNC, le système de normalisation comptable portugais. Nous conseillons la meilleure option à suivre, selon les besoins et le type d'activité, et nous accompagnons le démarrage de l'activité et la constitution de sociétés.</p>
+          <p>Nous préparons les états financiers annuels et intermédiaires, selon les besoins du client, afin qu'il puisse prendre à temps les meilleures décisions. Nous aidons à la planification fiscale du client en tenant compte de l'évolution des données enregistrées dans l'activité.</p>
+        </article>
+
+        <article class="card card-wide" id="fiscalidade">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9.5 17l5-6"/><circle cx="9.7" cy="11.7" r="1"/><circle cx="14.3" cy="16.3" r="1"/></svg></div>
+          <div>
+            <h3>Fiscalité</h3>
+            <p style="margin-top:.75rem">Nous planifions, préparons et accomplissons avec transparence et efficacité toutes les obligations fiscales légalement exigées. Nous aidons nos clients à comprendre la fiscalité, afin que la raison du paiement de l'impôt soit claire et que, ensemble, nous puissions optimiser la performance fiscale.</p>
+          </div>
+        </article>
+
+        <article class="card card-warm" id="rh">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.700 6 6"/><circle cx="17" cy="9.500" r="2.400"/><path d="M16.500 14.200c2.600.2 4.500 2.400 4.500 5.100"/></svg></div>
+          <h3>Ressources humaines</h3>
+          <p>Nous réalisons le traitement de la paie ainsi que le dépôt des déclarations correspondantes auprès de la Sécurité sociale portugaise. Enregistrement du début et/ou de la fin des contrats auprès de la Sécurité sociale.</p>
+        </article>
+
+        <article class="card" id="consultoria">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M7.500 15.500l3.500-4 3 2.500 4.500-6"/><path d="M15.500 8h3v3"/></svg></div>
+          <h3>Conseil</h3>
+          <p>Nous accompagnons le client dans la prise de décisions sur la base des enregistrements comptables. Nous encourageons des réunions régulières pour analyser ensemble les états financiers et améliorer la prise de décisions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="wrap about-grid">
+      <div>
+        <h2>Pourquoi faire appel à nos services ?</h2>
+        <p class="text">CJF compte de nombreuses années d'expérience dans l'exercice de la comptabilité, de la fiscalité et du conseil en gestion d'entreprises dans les secteurs d'activité les plus variés.</p>
+        <ul class="values" aria-label="Nos valeurs">
+          <li>Qualité</li><li>Rigueur</li><li>Compétence</li><li>Confidentialité</li>
+        </ul>
+      </div>
+      <aside class="founder">
+        <strong>Jorge Fernandes</strong>
+        <small>Fondateur de CJF</small>
+        <p>Comptable certifié inscrit à l'Ordem dos Contabilistas Certificados (l'ordre portugais des comptables certifiés) sous le numéro 64605, responsable technique de CJF.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="contact" id="contactos">
+    <div class="wrap">
+      <h2>Contactez-nous, nous sommes à votre disposition.</h2>
+      <p class="sub">Pour toute question ou précision, appelez, écrivez ou passez au bureau.</p>
+      <div class="ways">
+        <a class="way way-main" href="tel:+351961955184">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.500 4h3l1.500 4-2 1.500a11 11 0 0 0 5.500 5.500l1.500-2 4 1.500v3a2 2 0 0 1-2 2A15 15 0 0 1 4.500 6a2 2 0 0 1 2-2z"/></svg>
+          <b>Téléphone</b>
+          <span>+351 961 955 184</span>
+          <small>Appel vers un mobile au Portugal</small>
+        </a>
+        <a class="way" href="mailto:geral@tocfernandes.pt">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.500 7l8.500 6 8.500-6"/></svg>
+          <b>E-mail</b>
+          <span>geral@tocfernandes.pt</span>
+        </a>
+        <a class="way" href="https://www.google.com/maps/search/?api=1&amp;query=Largo+12+de+Dezembro+9+4705-259+Lomar+Braga" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.200 7-11.500a7 7 0 0 0-14 0C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>
+          <b>Adresse</b>
+          <span>Largo 12 de Dezembro, 9 R/C</span>
+          <small>4705-259 Lomar (Braga), Portugal · ouvrir sur la carte</small>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="ano">2026</span> CJF – Contabilidades Jorge Fernandes · AJRSF Unipessoal Lda · NIF 513 058 850 · <a class="legal" href="privacidade.html">Confidentialité et mentions légales</a> · <a class="legal" href="cookies.html">Cookies</a> · <a class="legal" href="termos.html">Conditions générales</a></span>
+    <a href="https://www.facebook.com/profile.php?id=100054249710188" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.560 9.880v-6.990H7.900V12h2.540V9.800c0-2.500 1.490-3.890 3.780-3.890 1.090 0 2.240.2 2.240.2v2.460h-1.260c-1.240 0-1.630.77-1.630 1.560V12h2.780l-.44 2.890h-2.340v6.990A10 10 0 0 0 22 12z"/></svg>
+      Suivez-nous sur Facebook
+    </a>
+  </div>
+</footer>
+<script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>

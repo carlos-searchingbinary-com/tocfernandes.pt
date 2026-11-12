@@ -14,3 +14,11 @@ DNS (Amen) para `tocfernandes.pt`:
 Não mexer nos registos MX/TXT (email Office 365) nem em `server`.
 
 Depois de o DNS propagar: *Settings → Pages → Custom domain* = `tocfernandes.pt`, e ativar *Enforce HTTPS* (o certificado é emitido automaticamente pelo GitHub).
+
+## Línguas
+
+As páginas na raiz (português) são a fonte. As versões `en/`, `es/` e `fr/` são geradas:
+
+    python3 _build.py
+
+As traduções estão em `_i18n.py`. O script falha se alguma frase em português não tiver tradução, por isso corre-o sempre que alterares uma página e faz commit do resultado.

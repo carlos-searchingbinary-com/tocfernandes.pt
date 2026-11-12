@@ -5,6 +5,13 @@
   a { color: var(--apricot-deep); }
   :focus-visible { outline: 3px solid var(--apricot); outline-offset: 3px; border-radius: 2px; }
   .wrap { max-width: 46rem; margin: 0 auto; padding-inline: 1.5rem; }
+  .langbar { background: var(--night); }
+  .langbar .wrap { display: flex; justify-content: flex-end; }
+  .langs { display: flex; gap: .15rem; margin-right: -.55rem; }
+  .langs a { color: #b9bdd6; font-size: .8rem; font-weight: 600; letter-spacing: .05em; text-decoration: none; padding: .45rem .55rem; }
+  .langs a:hover { color: #fff; }
+  .langs a[aria-current] { color: var(--apricot); }
+  .note { background: var(--mist); border-radius: .75rem; padding: .9rem 1.1rem; color: var(--muted); font-size: .95rem; margin-bottom: 2rem; }
   header { box-shadow: 0 1px 0 rgba(38,42,74,.1); }
   header .wrap { display: flex; align-items: center; justify-content: space-between; height: 4.75rem; }
   header img { height: 2.9rem; width: auto; display: block; }
