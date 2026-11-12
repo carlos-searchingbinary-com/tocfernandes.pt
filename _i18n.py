@@ -125,6 +125,11 @@ T = {
     "CJF – Contabilidades Jorge Fernandes est la marque sous laquelle opère la société suivante :"),
 "Denominação": ("Company name", "Denominación", "Dénomination"),
 "NIF": ("Tax number (NIF)", "NIF", "Numéro fiscal (NIF)"),
+"Registo comercial": ("Commercial registry", "Registro mercantil", "Registre du commerce"),
+"Conservatória do Registo Comercial de Braga, matrícula n.º 513058850": (
+    "Conservatória do Registo Comercial de Braga (Braga Commercial Registry), registration no. 513058850",
+    "Conservatória do Registo Comercial de Braga (Registro Mercantil de Braga), matrícula n.º 513058850",
+    "Conservatória do Registo Comercial de Braga (registre du commerce de Braga), immatriculation n° 513058850"),
 "Sede": ("Registered office", "Sede", "Siège"),
 "Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, Braga": ("Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, Braga, Portugal",)*3,
 "(chamada para a rede móvel nacional)": ("(call to a Portuguese mobile number)", "(llamada a la red móvil nacional de Portugal)", "(appel vers un mobile au Portugal)"),
