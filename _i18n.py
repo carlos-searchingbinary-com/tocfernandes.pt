@@ -21,10 +21,10 @@ T = {
     "Accountant in Braga, Portugal | CJF – Contabilidades Jorge Fernandes",
     "Contabilidad en Braga, Portugal | CJF – Contabilidades Jorge Fernandes",
     "Comptabilité à Braga, Portugal | CJF – Contabilidades Jorge Fernandes"),
-"Gabinete de contabilidade em Lomar, Braga: contabilidade, fiscalidade, salários e consultoria de gestão para empresas de Braga e do Norte de Portugal. Contabilista certificado OCC n.º 64605.": (
-    "Accounting firm in Lomar, Braga: accounting, tax, payroll and management consulting for companies in Braga and Northern Portugal. Certified accountant, OCC no. 64605.",
-    "Asesoría contable en Lomar, Braga: contabilidad, fiscalidad, nóminas y consultoría de gestión para empresas de Braga y del Norte de Portugal. Contable certificado OCC n.º 64605.",
-    "Cabinet comptable à Lomar, Braga : comptabilité, fiscalité, paie et conseil en gestion pour les entreprises de Braga et du Nord du Portugal. Comptable certifié OCC n° 64605."),
+"Gabinete de contabilidade em Braga: contabilidade, fiscalidade, salários e consultoria para empresas de Braga e do Norte de Portugal. Contabilista certificado.": (
+    "Accounting firm in Braga, Portugal: accounting, tax, payroll and consulting for companies in Braga and Northern Portugal. Certified accountant.",
+    "Asesoría contable en Braga: contabilidad, fiscalidad, nóminas y consultoría para empresas de Braga y del Norte de Portugal. Contable certificado.",
+    "Cabinet comptable à Braga : comptabilité, fiscalité, paie et conseil pour les entreprises de Braga et du Nord du Portugal. Comptable certifié."),
 "Folha de trabalho da CJF com as obrigações da empresa em dia e o selo de Contabilista Certificado OCC n.º 64605": (
     "CJF worksheet showing the company's obligations up to date, with the Certified Accountant seal, OCC no. 64605",
     "Hoja de trabajo de CJF con las obligaciones de la empresa al día y el sello de Contable Certificado OCC n.º 64605",
