@@ -155,6 +155,16 @@
   .founder strong { display: block; font-family: var(--display); font-weight: 500; font-size: 2rem; line-height: 1.1; }
   .founder small { display: block; margin: .35rem 0 1.1rem; font-size: 1rem; font-weight: 600; color: var(--apricot-deep); }
   .founder p { color: var(--muted); font-size: 1rem; }
+  .faq { background: var(--mist); padding: 6rem 0; }
+  .faq h2 { font-size: clamp(2.2rem, 4.4vw, 3.6rem); }
+  .faq-list { margin-top: 2.5rem; max-width: 52rem; border-top: 1px solid #cfd3e3; }
+  .faq details { border-bottom: 1px solid #cfd3e3; }
+  .faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding: 1.25rem 0; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-family: var(--display); font-size: 1.8rem; line-height: 1; color: var(--apricot-deep); }
+  .faq details[open] summary::after { content: "–"; }
+  .faq h3 { font-family: var(--display); font-weight: 500; font-size: 1.35rem; line-height: 1.25; margin: 0; }
+  .faq details p { color: var(--muted); font-size: 1.05rem; max-width: 44rem; padding: 0 0 1.5rem; margin: 0; }
 
   /* ---------- contact ---------- */
   .contact { background: var(--night); color: #fff; padding: 6rem 0 5rem; position: relative; overflow: hidden; }
@@ -210,7 +220,8 @@
     .btn, .way { transition: none; }
   }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AccountingService", "@id": "https://tocfernandes.pt/#empresa", "name": "CJF – Contabilidades Jorge Fernandes", "legalName": "AJRSF Unipessoal Lda", "url": "https://tocfernandes.pt/", "logo": "https://tocfernandes.pt/assets/apple-touch-icon.png", "image": "https://tocfernandes.pt/assets/og.png", "description": "Gabinete de contabilidade em Lomar, Braga: contabilidade, fiscalidade, recursos humanos e consultoria de gestão para empresas.", "telephone": "+351961955184", "email": "geral@tocfernandes.pt", "vatID": "PT513058850", "address": {"@type": "PostalAddress", "streetAddress": "Largo 12 de Dezembro, 9 R/C", "postalCode": "4705-259", "addressLocality": "Lomar, Braga", "addressRegion": "Braga", "addressCountry": "PT"}, "areaServed": [{"@type": "City", "name": "Braga"}, {"@type": "AdministrativeArea", "name": "Norte de Portugal"}], "founder": {"@type": "Person", "name": "Jorge Fernandes", "jobTitle": "Contabilista certificado (OCC n.º 64605)"}, "sameAs": ["https://www.facebook.com/profile.php?id=100054249710188", "https://maps.app.goo.gl/GSooTDGDHinaKj7w7"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Serviços", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Contabilidade"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fiscalidade"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Recursos Humanos e processamento de salários"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consultoria de gestão"}}]}, "hasMap": "https://maps.app.goo.gl/GSooTDGDHinaKj7w7", "geo": {"@type": "GeoCoordinates", "latitude": 41.5374678, "longitude": -8.4317638}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:30", "closes": "18:30"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AccountingService", "@id": "https://tocfernandes.pt/#empresa", "name": "CJF – Contabilidades Jorge Fernandes", "legalName": "AJRSF Unipessoal Lda", "url": "https://tocfernandes.pt/", "logo": "https://tocfernandes.pt/assets/apple-touch-icon.png", "image": "https://tocfernandes.pt/assets/og.png", "description": "Gabinete de contabilidade em Lomar, Braga: contabilidade, fiscalidade, recursos humanos e consultoria de gestão para empresas.", "telephone": "+351961955184", "email": "geral@tocfernandes.pt", "vatID": "PT513058850", "foundingDate": "2014-03-25", "address": {"@type": "PostalAddress", "streetAddress": "Largo 12 de Dezembro, 9 R/C", "postalCode": "4705-259", "addressLocality": "Lomar, Braga", "addressRegion": "Braga", "addressCountry": "PT"}, "areaServed": [{"@type": "City", "name": "Braga"}, {"@type": "AdministrativeArea", "name": "Norte de Portugal"}], "founder": {"@type": "Person", "name": "Jorge Fernandes", "jobTitle": "Contabilista certificado (OCC n.º 64605)"}, "sameAs": ["https://www.facebook.com/profile.php?id=100054249710188", "https://maps.app.goo.gl/GSooTDGDHinaKj7w7"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Serviços", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Contabilidade"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fiscalidade"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Recursos Humanos e processamento de salários"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consultoria de gestão"}}]}, "hasMap": "https://maps.app.goo.gl/GSooTDGDHinaKj7w7", "geo": {"@type": "GeoCoordinates", "latitude": 41.5374678, "longitude": -8.4317638}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:30", "closes": "18:30"}]}</script>
+<!--faqld--><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quels services propose CJF – Contabilidades Jorge Fernandes ?", "acceptedAnswer": {"@type": "Answer", "text": "CJF propose quatre services aux entreprises : comptabilité selon le référentiel portugais SNC, fiscalité, ressources humaines (paie et déclarations à la Sécurité sociale) et conseil en gestion. Le cabinet prépare aussi les états financiers annuels et intermédiaires."}}, {"@type": "Question", "name": "Où se trouve le cabinet CJF à Braga ?", "acceptedAnswer": {"@type": "Answer", "text": "Le cabinet se trouve Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, à Braga (Portugal). Il est ouvert du lundi au vendredi."}}, {"@type": "Question", "name": "Qui est le comptable certifié responsable ?", "acceptedAnswer": {"@type": "Answer", "text": "Le responsable technique est Jorge Fernandes, fondateur de CJF, comptable certifié inscrit à l'Ordre des comptables certifiés du Portugal (OCC) sous le n° 64605."}}, {"@type": "Question", "name": "Quel type d'entreprises CJF accompagne-t-il ?", "acceptedAnswer": {"@type": "Answer", "text": "CJF accompagne plus de 80 entreprises du secteur privé, des petites et moyennes entreprises aux grandes entreprises, dans plusieurs secteurs d'activité. La société a été constituée en 2014."}}, {"@type": "Question", "name": "CJF travaille-t-il avec des entreprises hors de Braga ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. CJF a son cabinet à Braga et accompagne des entreprises de Braga et du Nord du Portugal."}}, {"@type": "Question", "name": "CJF aide-t-il à créer une entreprise ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. CJF accompagne le démarrage d'activité et la constitution de sociétés, et conseille la meilleure option selon les besoins et le type d'activité."}}, {"@type": "Question", "name": "Comment demander un devis ?", "acceptedAnswer": {"@type": "Answer", "text": "Appelez le +351 961 955 184 ou écrivez à geral@tocfernandes.pt. Le site n'a pas de grille tarifaire : le devis est établi sur mesure pour chaque entreprise."}}]}</script><!--/faqld-->
 </head>
 <body>
 <a class="skip" href="#conteudo">Aller au contenu</a>
@@ -324,7 +335,7 @@
     <div class="wrap about-grid">
       <div>
         <h2>Pourquoi faire appel à nos services ?</h2>
-        <p class="text">CJF compte de nombreuses années d'expérience dans l'exercice de la comptabilité, de la fiscalité et du conseil en gestion d'entreprises dans les secteurs d'activité les plus variés.</p>
+        <p class="text">Depuis 2014, CJF accompagne plus de 80 entreprises du secteur privé, des PME aux grandes entreprises, en comptabilité, fiscalité et conseil en gestion, dans les secteurs d'activité les plus variés.</p>
         <ul class="values" aria-label="Nos valeurs">
           <li>Qualité</li><li>Rigueur</li><li>Compétence</li><li>Confidentialité</li>
         </ul>
@@ -334,6 +345,28 @@
         <small>Fondateur de CJF</small>
         <p>Comptable certifié inscrit à l'Ordem dos Contabilistas Certificados (l'ordre portugais des comptables certifiés) sous le numéro 64605, responsable technique de CJF.</p>
       </aside>
+    </div>
+  </section>
+
+  <section class="faq" id="perguntas">
+    <div class="wrap">
+      <h2>Questions fréquentes</h2>
+      <div class="faq-list">
+        <details><summary><h3>Quels services propose CJF – Contabilidades Jorge Fernandes ?</h3></summary>
+          <p>CJF propose quatre services aux entreprises : comptabilité selon le référentiel portugais SNC, fiscalité, ressources humaines (paie et déclarations à la Sécurité sociale) et conseil en gestion. Le cabinet prépare aussi les états financiers annuels et intermédiaires.</p></details>
+        <details><summary><h3>Où se trouve le cabinet CJF à Braga ?</h3></summary>
+          <p>Le cabinet se trouve Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, à Braga (Portugal). Il est ouvert du lundi au vendredi.</p></details>
+        <details><summary><h3>Qui est le comptable certifié responsable ?</h3></summary>
+          <p>Le responsable technique est Jorge Fernandes, fondateur de CJF, comptable certifié inscrit à l'Ordre des comptables certifiés du Portugal (OCC) sous le n° 64605.</p></details>
+        <details><summary><h3>Quel type d'entreprises CJF accompagne-t-il ?</h3></summary>
+          <p>CJF accompagne plus de 80 entreprises du secteur privé, des petites et moyennes entreprises aux grandes entreprises, dans plusieurs secteurs d'activité. La société a été constituée en 2014.</p></details>
+        <details><summary><h3>CJF travaille-t-il avec des entreprises hors de Braga ?</h3></summary>
+          <p>Oui. CJF a son cabinet à Braga et accompagne des entreprises de Braga et du Nord du Portugal.</p></details>
+        <details><summary><h3>CJF aide-t-il à créer une entreprise ?</h3></summary>
+          <p>Oui. CJF accompagne le démarrage d'activité et la constitution de sociétés, et conseille la meilleure option selon les besoins et le type d'activité.</p></details>
+        <details><summary><h3>Comment demander un devis ?</h3></summary>
+          <p>Appelez le +351 961 955 184 ou écrivez à geral@tocfernandes.pt. Le site n'a pas de grille tarifaire : le devis est établi sur mesure pour chaque entreprise.</p></details>
+      </div>
     </div>
   </section>
 

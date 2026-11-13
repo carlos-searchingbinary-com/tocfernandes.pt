@@ -4,7 +4,7 @@
 The root pages are the source of truth. Run `python3 _build.py` after editing them;
 it fails if any Portuguese text has no translation in _i18n.py.
 """
-import re, sys, pathlib
+import re, sys, json, html, pathlib
 from _i18n import T, KEEP, LEGAL_NOTE
 
 ROOT = pathlib.Path(__file__).parent
@@ -73,6 +73,19 @@ def sitemap():
         'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + urls + "</urlset>\n")
 
 
+FAQ = re.compile(r"<details><summary><h3>(.*?)</h3></summary>\s*<p>(.*?)</p></details>", re.S)
+
+
+def faq_ld(s):
+    """FAQPage JSON-LD built from the visible (already translated) questions, so the two cannot drift."""
+    qa = FAQ.findall(s)
+    assert qa, "no FAQ items found"
+    ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": html.unescape(q), "acceptedAnswer": {"@type": "Answer", "text": html.unescape(t)}}
+        for q, t in qa]}
+    return between(s, "faqld", '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>")
+
+
 def translate(s, lang, missing):
     i = LANGS.index(lang) - 1
 
@@ -105,7 +118,7 @@ def main():
     missing = set()
     for page in PAGES:
         src = chrome((ROOT / page).read_text(), page, "pt")
-        (ROOT / page).write_text(social(src, page, "pt"))
+        (ROOT / page).write_text(social(faq_ld(src) if page == "index.html" else src, page, "pt"))
         for lang in LANGS[1:]:
             s = chrome(src, page, lang)
             s = translate(s, lang, missing)
@@ -117,7 +130,7 @@ def main():
                 assert s.count(a) == 1
                 s = s.replace(a, a + f'  <p class="note">{LEGAL_NOTE[lang]}</p>\n')
             (ROOT / lang).mkdir(exist_ok=True)
-            (ROOT / lang / page).write_text(social(s, page, lang))
+            (ROOT / lang / page).write_text(social(faq_ld(s) if page == "index.html" else s, page, lang))
     if missing:
         sys.exit("No translation in _i18n.py for:\n  " + "\n  ".join(sorted(missing)))
     unused = [k for k in T if not any(k in (ROOT / p).read_text() for p in PAGES)]

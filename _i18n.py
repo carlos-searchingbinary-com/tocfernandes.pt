@@ -86,10 +86,74 @@ T = {
     "Apoyamos al cliente en la toma de decisiones con base en los registros contables. Fomentamos reuniones periódicas para el análisis conjunto de los estados financieros, para mejorar la toma de decisiones.",
     "Nous accompagnons le client dans la prise de décisions sur la base des enregistrements comptables. Nous encourageons des réunions régulières pour analyser ensemble les états financiers et améliorer la prise de décisions."),
 "Porquê contratar os nossos serviços?": ("Why choose our services?", "¿Por qué contratar nuestros servicios?", "Pourquoi faire appel à nos services ?"),
-"A CJF conta com vários anos de experiência no exercício da contabilidade, fiscalidade e consultoria de gestão de empresas nos mais variados setores de atividade.": (
-    "CJF has many years of experience practising accounting, tax and business management consulting for companies in a wide range of sectors.",
-    "CJF cuenta con varios años de experiencia en el ejercicio de la contabilidad, la fiscalidad y la consultoría de gestión de empresas en los más variados sectores de actividad.",
-    "CJF compte de nombreuses années d'expérience dans l'exercice de la comptabilité, de la fiscalité et du conseil en gestion d'entreprises dans les secteurs d'activité les plus variés."),
+'Desde 2014, a CJF acompanha mais de 80 empresas do setor privado, de PME a grandes empresas, em contabilidade, fiscalidade e consultoria de gestão, nos mais variados setores de atividade.': (
+    'Since 2014, CJF has supported more than 80 private-sector companies, from SMEs to large companies, with accounting, tax and management consulting across a wide range of industries.',
+    'Desde 2014, CJF acompaña a más de 80 empresas del sector privado, desde pymes hasta grandes empresas, en contabilidad, fiscalidad y consultoría de gestión, en los más variados sectores de actividad.',
+    "Depuis 2014, CJF accompagne plus de 80 entreprises du secteur privé, des PME aux grandes entreprises, en comptabilité, fiscalité et conseil en gestion, dans les secteurs d'activité les plus variés."),
+'Perguntas frequentes': (
+    'Frequently asked questions',
+    'Preguntas frecuentes',
+    'Questions fréquentes'),
+'Que serviços presta a CJF – Contabilidades Jorge Fernandes?': (
+    'What services does CJF – Contabilidades Jorge Fernandes provide?',
+    '¿Qué servicios presta CJF – Contabilidades Jorge Fernandes?',
+    'Quels services propose CJF – Contabilidades Jorge Fernandes ?'),
+'A CJF presta quatro serviços a empresas: contabilidade organizada segundo o SNC, fiscalidade, recursos humanos (processamento de salários e obrigações junto da Segurança Social) e consultoria de gestão. Prepara também as demonstrações financeiras anuais e intercalares.': (
+    'CJF provides four services to companies: accounting under the Portuguese SNC standards, tax, human resources (payroll and Social Security filings) and management consulting. It also prepares annual and interim financial statements.',
+    'CJF presta cuatro servicios a empresas: contabilidad según el SNC portugués, fiscalidad, recursos humanos (nóminas y obligaciones ante la Seguridad Social) y consultoría de gestión. También prepara los estados financieros anuales e intermedios.',
+    'CJF propose quatre services aux entreprises : comptabilité selon le référentiel portugais SNC, fiscalité, ressources humaines (paie et déclarations à la Sécurité sociale) et conseil en gestion. Le cabinet prépare aussi les états financiers annuels et intermédiaires.'),
+'Onde fica o gabinete da CJF em Braga?': (
+    'Where is the CJF office in Braga?',
+    '¿Dónde está la oficina de CJF en Braga?',
+    'Où se trouve le cabinet CJF à Braga ?'),
+'O gabinete fica no Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, em Braga. Atende de segunda a sexta-feira.': (
+    'The office is at Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, in Braga, Portugal. It is open Monday to Friday.',
+    'La oficina está en Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, en Braga (Portugal). Atiende de lunes a viernes.',
+    'Le cabinet se trouve Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, à Braga (Portugal). Il est ouvert du lundi au vendredi.'),
+'Quem é o contabilista certificado responsável?': (
+    'Who is the certified accountant in charge?',
+    '¿Quién es el contable certificado responsable?',
+    'Qui est le comptable certifié responsable ?'),
+'O responsável técnico é Jorge Fernandes, fundador da CJF, contabilista certificado inscrito na Ordem dos Contabilistas Certificados (OCC) com o n.º 64605.': (
+    'The technical lead is Jorge Fernandes, founder of CJF, a certified accountant registered with the Portuguese Order of Certified Accountants (OCC) under no. 64605.',
+    'El responsable técnico es Jorge Fernandes, fundador de CJF, contable certificado inscrito en la Orden de Contables Certificados de Portugal (OCC) con el n.º 64605.',
+    "Le responsable technique est Jorge Fernandes, fondateur de CJF, comptable certifié inscrit à l'Ordre des comptables certifiés du Portugal (OCC) sous le n° 64605."),
+'Que tipo de empresas acompanha a CJF?': (
+    'What kind of companies does CJF work with?',
+    '¿Qué tipo de empresas acompaña CJF?',
+    "Quel type d'entreprises CJF accompagne-t-il ?"),
+'A CJF acompanha mais de 80 empresas do setor privado, de pequenas e médias empresas a grandes empresas, em vários setores de atividade. A sociedade foi constituída em 2014.': (
+    'CJF works with more than 80 private-sector companies, from small and medium-sized businesses to large companies, across several industries. The firm was incorporated in 2014.',
+    'CJF acompaña a más de 80 empresas del sector privado, desde pequeñas y medianas empresas hasta grandes empresas, en varios sectores de actividad. La sociedad se constituyó en 2014.',
+    "CJF accompagne plus de 80 entreprises du secteur privé, des petites et moyennes entreprises aux grandes entreprises, dans plusieurs secteurs d'activité. La société a été constituée en 2014."),
+'A CJF trabalha com empresas fora de Braga?': (
+    'Does CJF work with companies outside Braga?',
+    '¿Trabaja CJF con empresas de fuera de Braga?',
+    'CJF travaille-t-il avec des entreprises hors de Braga ?'),
+'Sim. A CJF tem escritório em Braga e acompanha empresas de Braga e do Norte de Portugal.': (
+    'Yes. CJF has its office in Braga and works with companies in Braga and across Northern Portugal.',
+    'Sí. CJF tiene su oficina en Braga y acompaña a empresas de Braga y del Norte de Portugal.',
+    'Oui. CJF a son cabinet à Braga et accompagne des entreprises de Braga et du Nord du Portugal.'),
+'A CJF ajuda a abrir uma empresa?': (
+    'Does CJF help with setting up a company?',
+    '¿Ayuda CJF a crear una empresa?',
+    'CJF aide-t-il à créer une entreprise ?'),
+'Sim. A CJF dá apoio no início de atividade e na constituição de sociedades, e aconselha a melhor opção de acordo com as necessidades e o tipo de negócio.': (
+    'Yes. CJF supports business start-ups and company incorporation, and advises on the best option for your needs and type of business.',
+    'Sí. CJF presta apoyo en el inicio de actividad y en la constitución de sociedades, y aconseja la mejor opción según las necesidades y el tipo de negocio.',
+    "Oui. CJF accompagne le démarrage d'activité et la constitution de sociétés, et conseille la meilleure option selon les besoins et le type d'activité."),
+'Como posso pedir um orçamento?': (
+    'How can I ask for a quote?',
+    '¿Cómo puedo pedir un presupuesto?',
+    'Comment demander un devis ?'),
+'Ligue para o 961 955 184 ou escreva para geral@tocfernandes.pt. O site não tem tabela de preços: o orçamento é feito à medida de cada empresa.': (
+    'Call +351 961 955 184 or write to geral@tocfernandes.pt. The site has no price list: each quote is tailored to the company.',
+    'Llame al +351 961 955 184 o escriba a geral@tocfernandes.pt. El sitio no tiene lista de precios: el presupuesto se hace a medida de cada empresa.',
+    "Appelez le +351 961 955 184 ou écrivez à geral@tocfernandes.pt. Le site n'a pas de grille tarifaire : le devis est établi sur mesure pour chaque entreprise."),
+'Capital social': (
+    'Share capital',
+    'Capital social',
+    'Capital social'),
 "Qualidade": ("Quality", "Calidad", "Qualité"),
 "Rigor": ("Rigour", "Rigor", "Rigueur"),
 "Competência": ("Competence", "Competencia", "Compétence"),
