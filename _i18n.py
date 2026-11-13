@@ -106,10 +106,10 @@ T = {
     'Where is the CJF office in Braga?',
     '¿Dónde está la oficina de CJF en Braga?',
     'Où se trouve le cabinet CJF à Braga ?'),
-'O gabinete fica no Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, em Braga. Atende de segunda a sexta-feira.': (
-    'The office is at Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, in Braga, Portugal. It is open Monday to Friday.',
-    'La oficina está en Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, en Braga (Portugal). Atiende de lunes a viernes.',
-    'Le cabinet se trouve Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, à Braga (Portugal). Il est ouvert du lundi au vendredi.'),
+'O gabinete fica no Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, em Braga. Atende de segunda a sexta-feira, das 9h às 18h.': (
+    'The office is at Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, in Braga, Portugal. It is open Monday to Friday, 9 am to 6 pm.',
+    'La oficina está en Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, en Braga (Portugal). Atiende de lunes a viernes, de 9:00 a 18:00.',
+    'Le cabinet se trouve Largo 12 de Dezembro, 9 R/C, 4705-259 Lomar, à Braga (Portugal). Il est ouvert du lundi au vendredi, de 9h à 18h.'),
 'Quem é o contabilista certificado responsável?': (
     'Who is the certified accountant in charge?',
     '¿Quién es el contable certificado responsable?',
@@ -168,10 +168,10 @@ T = {
     "For any question or clarification, call, write or drop by the office.",
     "Para cualquier duda o aclaración, llame, escriba o pase por la oficina.",
     "Pour toute question ou précision, appelez, écrivez ou passez au bureau."),
-"Horário: segunda a sexta, das 9h30 às 18h30.": (
-    "Opening hours: Monday to Friday, 9:30 am to 6:30 pm.",
-    "Horario: de lunes a viernes, de 9:30 a 18:30.",
-    "Horaires : du lundi au vendredi, de 9h30 à 18h30."),
+"Horário: segunda a sexta, das 9h às 18h.": (
+    "Opening hours: Monday to Friday, 9 am to 6 pm.",
+    "Horario: de lunes a viernes, de 9:00 a 18:00.",
+    "Horaires : du lundi au vendredi, de 9h à 18h."),
 "Chamada para a rede móvel nacional": ("Call to a Portuguese mobile number", "Llamada a la red móvil nacional de Portugal", "Appel vers un mobile au Portugal"),
 "Morada": ("Address", "Dirección", "Adresse"),
 "4705-259 Lomar (Braga) · abrir no mapa": ("4705-259 Lomar (Braga), Portugal · open in map", "4705-259 Lomar (Braga), Portugal · abrir en el mapa", "4705-259 Lomar (Braga), Portugal · ouvrir sur la carte"),
